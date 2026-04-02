@@ -32,9 +32,9 @@ const VisionSection = ({ scrollYProgress }) => {
       <div style={{ padding: '0 5%' }}>
         <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', maxWidth: '1200px', textAlign: 'center', lineHeight: 1.2, fontWeight: 700, letterSpacing: '-0.03em' }}>
           {words.map((word, i) => {
-            // Text illuminates during 0.12 -> 0.25 scroll phase
-            const start = 0.12 + (i / words.length) * 0.13;
-            const end = start + (0.13 / words.length);
+            // Text illuminates during 0.08 -> 0.18 scroll phase
+            const start = 0.08 + (i / words.length) * 0.10;
+            const end = start + (0.10 / words.length);
             return (
               <Word key={i} progress={scrollYProgress} range={[start, end]}>
                 {word}
@@ -501,17 +501,16 @@ const Home = () => {
   const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start start", "end end"] });
   const isMobile = useIsMobile();
 
-  // By using a linear 1:1 map over 500vh, horizontal scroll feels perfettamente accoppiato alla rotella
   const x = useTransform(
     scrollYProgress,
-    [0, 1],
-    ["0vw", "-400vw"]
+    [0, 0.10, 0.20, 0.30, 0.45, 0.55, 0.80, 0.90, 1],
+    ["0vw", "-100vw", "-100vw", "-200vw", "-200vw", "-300vw", "-300vw", "-400vw", "-400vw"]
   );
 
   return (
     <div style={{ position: 'relative' }}>
        {/* LO SLIDER ORIZZONTALE STICKY / VERTICAL FLOW ON MOBILE */}
-       <div ref={containerRef} style={{ height: isMobile ? 'auto' : '500vh', position: 'relative' }}>
+       <div ref={containerRef} style={{ height: isMobile ? 'auto' : '1000vh', position: 'relative' }}>
          <div style={{ position: isMobile ? 'relative' : 'sticky', top: 0, height: isMobile ? 'auto' : '100vh', width: '100vw', overflow: isMobile ? 'visible' : 'hidden', backgroundColor: 'var(--bg-dark)' }}>
         
         {/* 1. HERO SECTION (REMAINS STICKY AT LEFT 0) */}

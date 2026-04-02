@@ -80,7 +80,7 @@ const PhasesInteractive = () => {
              key={i} 
              onClick={() => setActiveTab(i)}
              style={{
-               fontSize: activeTab === i ? 'clamp(6rem, 10vw, 10rem)' : 'clamp(3rem, 5vw, 5rem)',
+               fontSize: activeTab === i ? 'clamp(3.5rem, 10vw, 10rem)' : 'clamp(2rem, 5vw, 5rem)',
                fontWeight: 900,
                color: activeTab === i ? '#011936' : 'transparent',
                WebkitTextStroke: activeTab === i ? 'none' : '2px rgba(1, 25, 54, 0.25)',
@@ -230,7 +230,7 @@ const OfferingsInteractive = () => {
            animate={{ opacity: 1, y: 0 }}
            exit={{ opacity: 0, y: -30, transition: { duration: 0.2 } }}
            transition={{ duration: 0.5, staggerChildren: 0.1 }}
-           style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}
+           style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}
         >
            {offeringsData[activeTab].map((item, idx) => (
               <motion.div 
@@ -296,16 +296,17 @@ const Navbar = () => {
   }, [scrollYProgress]);
 
   const showWhiteNavbar = isFinalSection && location.pathname === "/";
+  const isMobile = useIsMobile();
 
   return (
     <nav style={{
       position: 'fixed',
-      top: isScrolled ? '1rem' : '0',
+      top: isScrolled ? (isMobile ? '0.5rem' : '1rem') : '0',
       left: isScrolled ? '50%' : '0',
       transform: isScrolled ? 'translateX(-50%)' : 'none',
       width: isScrolled ? '90%' : '100%',
       maxWidth: isScrolled ? '1200px' : '100%',
-      padding: isScrolled ? '1rem 2.5rem' : '1.5rem 3rem',
+      padding: isScrolled ? (isMobile ? '0.75rem 1.5rem' : '1rem 2.5rem') : (isMobile ? '1rem 1.5rem' : '1.5rem 3rem'),
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
@@ -319,12 +320,12 @@ const Navbar = () => {
       boxShadow: showWhiteNavbar ? '0 20px 40px rgba(1, 25, 54, 0.05)' : (isScrolled ? '0 30px 60px rgba(0,0,0,0.3)' : 'none'),
     }}>
       <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
-        <img src="/Logo/Horizontal.svg" alt="Linfa Tech Logo" style={{ height: '32px', filter: showWhiteNavbar ? 'none' : 'brightness(0) invert(1)', transition: '0.6s' }} />
+        <img src="/Logo/Horizontal.svg" alt="Linfa Tech Logo" style={{ height: isMobile ? '24px' : '32px', filter: showWhiteNavbar ? 'none' : 'brightness(0) invert(1)', transition: '0.6s' }} />
       </Link>
-      <div style={{ display: 'flex', gap: '2.5rem', alignItems: 'center' }}>
-        <Link to="/offering" style={{ color: showWhiteNavbar ? '#011936' : '#fff', textDecoration: 'none', fontWeight: 600, transition: '0.6s' }}>La Nostra Offering</Link>
-        <a href="/#contact" className="btn" style={{ padding: '0.75rem 1.75rem', fontSize: '1rem', borderRadius: '100px' }}>
-          Inizia Ora <ArrowRight size={18} style={{marginLeft: '0.5rem'}} />
+      <div style={{ display: 'flex', gap: isMobile ? '1rem' : '2.5rem', alignItems: 'center' }}>
+        <Link to="/offering" style={{ color: showWhiteNavbar ? '#011936' : '#fff', textDecoration: 'none', fontWeight: 600, transition: '0.6s', fontSize: isMobile ? '0.85rem' : '1rem' }}>{isMobile ? 'Offering' : 'La Nostra Offering'}</Link>
+        <a href="/#contact" className="btn" style={{ padding: isMobile ? '0.5rem 1.2rem' : '0.75rem 1.75rem', fontSize: isMobile ? '0.85rem' : '1rem', borderRadius: '100px' }}>
+          Inizia { !isMobile && 'Ora' } { !isMobile && <ArrowRight size={18} style={{marginLeft: '0.5rem'}} /> }
         </a>
       </div>
     </nav>
@@ -361,7 +362,7 @@ const ServicesThreeBoxes = () => {
   ];
 
   return (
-    <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', width: '100%', maxWidth: '1850px', height: 'auto', gap: '3rem', margin: '0 auto', position: 'relative', zIndex: 10 }}>
+    <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', width: '100%', maxWidth: '1850px', height: 'auto', gap: isMobile ? '1.5rem' : '3rem', margin: '0 auto', position: 'relative', zIndex: 10 }}>
       {services.map((svc, i) => (
         <motion.div 
           key={i} 
@@ -378,7 +379,7 @@ const ServicesThreeBoxes = () => {
             border: `1px solid rgba(255,255,255,0.8)`,
             boxShadow: `0 30px 60px rgba(1, 25, 54, 0.05), inset 0 0 20px rgba(255,255,255,0.5)`,
             borderRadius: '24px',
-            padding: '4rem 3rem', 
+            padding: isMobile ? '2.5rem 1.5rem' : '4rem 3rem', 
             display: 'flex', 
             flexDirection: 'column',
             cursor: 'pointer',
@@ -464,7 +465,7 @@ const FooterCTA = () => {
           // Inizia il tuo viaggio
         </p>
         
-        <h2 style={{ fontSize: 'clamp(4rem, 6.5vw, 7.5rem)', lineHeight: 0.9, textTransform: 'uppercase', fontWeight: 900, letterSpacing: '-0.04em', marginBottom: '2rem', color: '#ffffff' }}>
+        <h2 style={{ fontSize: 'clamp(3rem, 10vw, 7.5rem)', lineHeight: 0.9, textTransform: 'uppercase', fontWeight: 900, letterSpacing: '-0.04em', marginBottom: '2rem', color: '#ffffff' }}>
            PRONTI AL<br/>
            <span style={{ color: 'transparent', WebkitTextStroke: '2px rgba(255,255,255,0.9)' }}>LANCIO?</span>
         </h2>
@@ -514,7 +515,7 @@ const Home = () => {
          <div style={{ position: isMobile ? 'relative' : 'sticky', top: 0, height: isMobile ? 'auto' : '100vh', width: '100vw', overflow: isMobile ? 'visible' : 'hidden', backgroundColor: 'var(--bg-dark)' }}>
         
         {/* 1. HERO SECTION (REMAINS STICKY AT LEFT 0) */}
-        <section className="section theme-dark" style={{ position: isMobile ? 'relative' : 'absolute', left: 0, top: 0, height: isMobile ? 'auto' : '100vh', minHeight: '100vh', width: '100vw', zIndex: 0, overflow: 'hidden' }}>
+        <section className="section theme-dark" style={{ position: isMobile ? 'relative' : 'absolute', left: 0, top: 0, height: '100vh', minHeight: '100vh', width: '100vw', zIndex: 0, overflow: 'hidden' }}>
           <div className="hero-video-wrapper" style={{ zIndex: 0 }}>
             <video 
               autoPlay 
@@ -528,19 +529,29 @@ const Home = () => {
             <div className="hero-overlay" style={{ zIndex: 1 }}></div>
           </div>
 
-          <div style={{ position: 'absolute', top: '50%', right: '5%', transform: 'translateY(-50%)', width: '100%', maxWidth: '700px', zIndex: 10, textAlign: 'left' }}>
+          <div style={{ 
+            position: 'absolute', 
+            top: '50%', 
+            left: isMobile ? '50%' : 'auto', 
+            right: isMobile ? 'auto' : '5%', 
+            transform: isMobile ? 'translate(-50%, -50%)' : 'translateY(-50%)', 
+            width: isMobile ? '90%' : '100%', 
+            maxWidth: '700px', 
+            zIndex: 10, 
+            textAlign: isMobile ? 'center' : 'left' 
+          }}>
             <motion.div
               className="liquid-glass-hero"
-              style={{ padding: '3rem', width: '100%' }}
+              style={{ padding: isMobile ? '2rem' : '3rem', width: '100%' }}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <p style={{ fontWeight: 700, fontSize: '1rem', marginBottom: '1.5rem', letterSpacing: '0.2em', color: 'var(--accent)', textTransform: 'uppercase' }}>
+              <p style={{ fontWeight: 700, fontSize: isMobile ? '0.85rem' : '1rem', marginBottom: '1.5rem', letterSpacing: '0.2em', color: 'var(--accent)', textTransform: 'uppercase' }}>
                 // Growth Partner Strategico
               </p>
               
-              <h1 style={{ fontSize: 'clamp(4rem, 6.5vw, 7.5rem)', lineHeight: 0.9, textTransform: 'uppercase', fontWeight: 900, letterSpacing: '-0.04em', marginBottom: '2rem', color: '#ffffff' }}>
+              <h1 style={{ fontSize: 'clamp(3rem, 10vw, 7.5rem)', lineHeight: 0.9, textTransform: 'uppercase', fontWeight: 900, letterSpacing: '-0.04em', marginBottom: '2rem', color: '#ffffff' }}>
                  DA ZERO<br/>
                  ALLA VERA<br/>
                  <span style={{ color: 'transparent', WebkitTextStroke: '2px rgba(255,255,255,0.9)' }}>TRACTION.</span>
@@ -563,7 +574,7 @@ const Home = () => {
           </div>
 
           {/* 3. SERVICES SECTION (THREE BOXES IN LIGHT THEME) */}
-          <section className="section theme-light" style={{ width: '100vw', height: isMobile ? 'auto' : '100vh', minHeight: '100vh', flexShrink: 0, overflowY: isMobile ? 'visible' : 'hidden', overflowX: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '80px 2% 0 2%', position: 'relative', backgroundColor: '#ffffff' }}>
+          <section className="section theme-light" style={{ width: '100vw', height: isMobile ? 'auto' : '100vh', minHeight: '100vh', flexShrink: 0, overflowY: isMobile ? 'visible' : 'hidden', overflowX: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: isMobile ? '120px 5% 40px 5%' : '80px 2% 0 2%', position: 'relative', backgroundColor: '#ffffff' }}>
              
              {/* HUGE WATERMARK BRAND MARK SOTTO I BOX */}
              <div style={{ position: 'absolute', top: '55%', left: '38%', transform: 'translate(-50%, -50%)', zIndex: 0, pointerEvents: 'none', opacity: 1, width: '45vw', display: 'flex', justifyContent: 'center' }}>
@@ -574,7 +585,7 @@ const Home = () => {
              <div className="ambient-glow" style={{ position: 'absolute', width: '50vw', height: '50vw', background: 'radial-gradient(circle, #0370FF, #011936)', left: '38%', top: '55%', transform: 'translate(-50%, -50%)', opacity: 0.1, filter: 'blur(150px)', zIndex: 0 }}></div>
              
              <div style={{ position: 'relative', zIndex: 10, width: '100%', maxWidth: '1850px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', margin: '0 auto' }}>
-                <div style={{ marginBottom: '2.5rem', paddingLeft: '0.5rem' }}>
+                <div style={{ marginBottom: isMobile ? '1.5rem' : '2.5rem', paddingLeft: '0.5rem' }}>
                    <p style={{ fontWeight: 700, fontSize: '0.9rem', color: '#011936', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '0.5rem', opacity: 0.6 }}>
                       // Le nostre competenze
                    </p>
@@ -625,7 +636,7 @@ const Home = () => {
                  borderLeft: '2px solid rgba(255, 255, 255, 0.95)',
                  boxShadow: '0 30px 60px rgba(1, 25, 54, 0.12), inset 0 0 30px rgba(255,255,255,1)',
                  borderRadius: '40px',
-                 padding: '5rem 4rem',
+                 padding: isMobile ? '3rem 1.5rem' : '5rem 4rem',
                  textAlign: 'center',
                  maxWidth: '900px',
                  width: '90%'

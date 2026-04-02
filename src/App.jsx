@@ -608,21 +608,23 @@ const Home = () => {
                 ECOSISTEMA
              </div>
 
-             {/* Ambient Glow per dar vita alla rifrazione del vetro */}
-             <div style={{ position: 'absolute', width: '60vw', height: '60vw', background: 'radial-gradient(circle, rgba(3,112,255,0.12) 0%, rgba(255,255,255,0) 65%)', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1, pointerEvents: 'none' }} />
+             {/* Ambient Glow per dar vita alla rifrazione del vetro (Risolto per Mobile Area Diffusa) */}
+             <div style={{ position: 'absolute', width: isMobile ? '150vw' : '60vw', height: isMobile ? '150vw' : '60vw', minWidth: '600px', minHeight: '600px', background: 'radial-gradient(circle, rgba(3,112,255,0.15) 0%, rgba(255,255,255,0) 65%)', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1, pointerEvents: 'none' }} />
 
              {/* Main Card */}
              <div 
                style={{ 
                  position: 'relative', 
                  zIndex: 10, 
-                 background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.1) 100%)',
-                 backdropFilter: 'blur(50px) saturate(200%)',
-                 WebkitBackdropFilter: 'blur(50px) saturate(200%)',
-                 border: '1px solid rgba(255, 255, 255, 0.4)',
-                 borderTop: '2px solid rgba(255, 255, 255, 0.9)',
-                 borderLeft: '2px solid rgba(255, 255, 255, 0.9)',
-                 boxShadow: '0 40px 80px rgba(1, 25, 54, 0.1), inset 0 0 30px rgba(255,255,255,0.8)',
+                 background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.25) 100%)',
+                 backdropFilter: 'blur(50px) saturate(150%)',
+                 WebkitBackdropFilter: 'blur(50px) saturate(150%)',
+                 WebkitTransform: 'translateZ(0)',
+                 transform: 'translateZ(0)',
+                 border: '1px solid rgba(255, 255, 255, 0.5)',
+                 borderTop: '2px solid rgba(255, 255, 255, 0.95)',
+                 borderLeft: '2px solid rgba(255, 255, 255, 0.95)',
+                 boxShadow: '0 30px 60px rgba(1, 25, 54, 0.12), inset 0 0 30px rgba(255,255,255,1)',
                  borderRadius: '40px',
                  padding: '5rem 4rem',
                  textAlign: 'center',

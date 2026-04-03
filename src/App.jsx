@@ -265,9 +265,10 @@ const OfferingsInteractive = () => {
                 position: 'relative',
                 background: isAct ? 'transparent' : 'linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.3) 100%)',
                 color: isAct ? '#ffffff' : '#011936',
-                border: isAct ? '1px solid transparent' : '1px solid rgba(255, 255, 255, 0.5)',
-                borderTop: isAct ? 'none' : '2px solid rgba(255, 255, 255, 1)',
-                borderLeft: isAct ? 'none' : '2px solid rgba(255, 255, 255, 1)',
+                border: '1px solid',
+                borderColor: isAct ? 'transparent' : 'rgba(255, 255, 255, 0.5)',
+                borderTopWidth: '1px',
+                borderLeftWidth: '1px',
                 backdropFilter: isAct ? 'none' : 'blur(40px) saturate(180%)',
                 WebkitBackdropFilter: isAct ? 'none' : 'blur(40px) saturate(180%)',
                 padding: '0.8rem 2.8rem',
@@ -276,8 +277,7 @@ const OfferingsInteractive = () => {
                 cursor: 'pointer',
                 fontWeight: 700,
                 transition: 'all 0.3s ease',
-                boxShadow: isAct ? 'none' : '0 8px 32px rgba(3, 112, 255, 0.05), inset 0 0 0 1px rgba(255,255,255,0.3)',
-                overflow: 'hidden'
+                boxShadow: isAct ? 'none' : '0 8px 32px rgba(3, 112, 255, 0.05), inset 0 0 0 1px rgba(255,255,255,0.3)'
               }}
             >
               {isAct && (

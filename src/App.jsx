@@ -618,9 +618,30 @@ const PortfolioHomeTeaser = () => {
                  </p>
                </div>
                
-               <div style={{ marginTop: 'auto', height: '55%', width: '100%', marginLeft: proj.centeredImage ? '0' : '8%', position: 'relative', overflow: 'hidden', borderTopLeftRadius: '24px', borderTopRightRadius: proj.centeredImage ? '24px' : '0' }}>
-                 <img src={proj.image} alt={proj.title} style={{ width: '100%', height: '100%', objectFit: proj.centeredImage ? 'contain' : 'cover', objectPosition: proj.centeredImage ? 'bottom center' : 'left top' }} />
-               </div>
+               {proj.centeredImage ? (
+                 <div style={{ marginTop: 'auto', height: '55%', width: '100%', display: 'flex', justifyContent: 'center' }}>
+                   <div style={{
+                     width: '75%',
+                     maxWidth: '380px',
+                     height: '100%',
+                     backgroundColor: '#111111',
+                     borderTopLeftRadius: '40px',
+                     borderTopRightRadius: '40px',
+                     padding: '14px 14px 0 14px',
+                     boxShadow: '0 -20px 40px rgba(0,0,0,0.25)',
+                     position: 'relative'
+                   }}>
+                     {/* Dynamic Island Mockup */}
+                     <div style={{ position: 'absolute', top: '22px', left: '50%', transform: 'translateX(-50%)', width: '30%', height: '26px', backgroundColor: '#111111', borderRadius: '15px', zIndex: 10 }} />
+                     
+                     <img src={proj.image} alt={proj.title} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', borderTopLeftRadius: '28px', borderTopRightRadius: '28px' }} />
+                   </div>
+                 </div>
+               ) : (
+                 <div style={{ marginTop: 'auto', height: '55%', width: '100%', marginLeft: '8%', position: 'relative', overflow: 'hidden', borderTopLeftRadius: '24px' }}>
+                   <img src={proj.image} alt={proj.title} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'left top' }} />
+                 </div>
+               )}
              </motion.div>
           ))}
         </div>

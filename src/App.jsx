@@ -543,18 +543,21 @@ const featuredProjects = [
     desc: "L'Intelligenza Artificiale applicata all'efficienza della GDO. Piattaforma SaaS unificata zero-waste.",
     image: "/portfolio/greencart_desktop.webp",
     brandColor: "13, 148, 136", // #0d9488 RGB
+    textColor: "#ffffff"
   },
   {
     title: "Batoo",
     desc: "Il marketplace definitivo per il mercato nautico europeo. Ecosistema end-to-end immersivo e innovativo.",
     image: "/portfolio/batoo.webp",
     brandColor: "3, 112, 255", // #0370FF RGB
+    textColor: "#ffffff"
   },
   {
     title: "Circlo",
     desc: "Il futuro del vuoto a rendere. Wallet digitale su logiche blockchain per il recupero plastiche.",
     image: "/portfolio/circlo_desktop.webp",
     brandColor: "234, 179, 8", // #eab308 RGB
+    textColor: "#011936"
   }
 ];
 
@@ -582,30 +585,40 @@ const PortfolioHomeTeaser = () => {
                style={{
                  position: 'relative',
                  overflow: 'hidden',
-                 borderRadius: '30px',
+                 borderRadius: '40px',
                  backgroundColor: `rgb(${proj.brandColor})`,
-                 border: `1px solid rgba(255, 255, 255, 0.1)`,
                  display: 'flex',
                  flexDirection: 'column',
-                 height: '100%',
+                 height: isMobile ? '550px' : '650px',
                  transition: 'all 0.4s'
                }}
-               whileHover={{ y: -10, boxShadow: `0 20px 40px rgba(${proj.brandColor}, 0.5)`, border: `1px solid rgba(255, 255, 255, 0.3)` }}
+               whileHover={{ y: -10, boxShadow: `0 20px 40px rgba(${proj.brandColor}, 0.5)` }}
              >
-               <div style={{ height: '300px', width: '100%', position: 'relative', overflow: 'hidden' }}>
-                 <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: `linear-gradient(to bottom, transparent 30%, rgb(${proj.brandColor}))` }} />
-                 <img src={proj.image} alt={proj.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-               </div>
-               
-               <div style={{ padding: isMobile ? '2rem' : '2.5rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                 <h3 style={{ fontSize: '2.2rem', fontWeight: 900, letterSpacing: '-0.03em', color: '#ffffff', marginBottom: '1rem' }}>{proj.title}</h3>
-                 <p style={{ color: 'rgba(255, 255, 255, 0.9)', fontSize: '1.15rem', lineHeight: 1.6, fontWeight: 500 }}>{proj.desc}</p>
-                 
-                 <div style={{ marginTop: 'auto', paddingTop: '2.5rem' }}>
-                   <Link to="/portfolio" style={{ color: '#ffffff', fontWeight: 900, display: 'flex', alignItems: 'center', textDecoration: 'none', fontSize: '1.05rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                     Scopri Progetto <ArrowRight size={18} style={{ marginLeft: '10px' }} />
+               <div style={{ padding: isMobile ? '2rem' : '3.5rem 3.5rem 2rem 3.5rem', display: 'flex', flexDirection: 'column' }}>
+                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1.5rem', gap: '1rem' }}>
+                   <h3 style={{ fontSize: 'clamp(2rem, 3vw, 2.5rem)', fontWeight: 900, letterSpacing: '-0.03em', color: proj.textColor, margin: 0, lineHeight: 1 }}>{proj.title}</h3>
+                   <Link to="/portfolio" style={{ 
+                     padding: '0.6rem 1.2rem', 
+                     backgroundColor: proj.textColor === '#011936' ? 'rgba(1, 25, 54, 0.1)' : 'rgba(255,255,255,0.15)', 
+                     borderRadius: '100px', 
+                     color: proj.textColor, 
+                     fontWeight: 700, 
+                     display: 'flex', 
+                     alignItems: 'center', 
+                     textDecoration: 'none', 
+                     fontSize: '0.9rem',
+                     flexShrink: 0
+                   }}>
+                     Scopri <ArrowRight size={16} strokeWidth={3} style={{ marginLeft: '6px', transform: 'rotate(-45deg)' }} />
                    </Link>
                  </div>
+                 <p style={{ color: proj.textColor === '#011936' ? 'rgba(1, 25, 54, 0.8)' : 'rgba(255, 255, 255, 0.9)', fontSize: '1.15rem', lineHeight: 1.5, fontWeight: 500, margin: 0 }}>
+                   {proj.desc}
+                 </p>
+               </div>
+               
+               <div style={{ marginTop: 'auto', height: '55%', width: '100%', position: 'relative', overflow: 'hidden', borderTopLeftRadius: '24px', borderTopRightRadius: '24px' }}>
+                 <img src={proj.image} alt={proj.title} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} />
                </div>
              </motion.div>
           ))}

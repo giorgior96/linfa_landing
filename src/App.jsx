@@ -537,6 +537,84 @@ const ServicesThreeBoxes = () => {
   );
 };
 
+const featuredProjects = [
+  {
+    title: "GreenCart",
+    desc: "L'Intelligenza Artificiale applicata all'efficienza della GDO. Piattaforma SaaS unificata zero-waste.",
+    image: "/portfolio/greencart_desktop.webp",
+    brandColor: "13, 148, 136", // #0d9488 RGB
+  },
+  {
+    title: "Batoo",
+    desc: "Il marketplace definitivo per il mercato nautico europeo. Ecosistema end-to-end immersivo e innovativo.",
+    image: "/portfolio/batoo.webp",
+    brandColor: "3, 112, 255", // #0370FF RGB
+  },
+  {
+    title: "Circlo",
+    desc: "Il futuro del vuoto a rendere. Wallet digitale su logiche blockchain per il recupero plastiche.",
+    image: "/portfolio/circlo_desktop.webp",
+    brandColor: "234, 179, 8", // #eab308 RGB
+  }
+];
+
+const PortfolioHomeTeaser = () => {
+  const isMobile = useIsMobile();
+  return (
+    <section className="section theme-light" style={{ padding: isMobile ? '5rem 0' : '8rem 5%', backgroundColor: '#ffffff', position: 'relative' }}>
+      <div style={{ maxWidth: '1400px', margin: '0 auto', display: 'flex', flexDirection: 'column', padding: '0 5%' }}>
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <p className="text-accent" style={{ fontWeight: 700, marginBottom: '1rem', fontSize: '1rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>// PORTFOLIO HIGHLIGHTS</p>
+          <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', justifyContent: 'space-between', alignItems: isMobile ? 'flex-start' : 'flex-end', marginBottom: '3rem', flexWrap: 'wrap', gap: '2rem' }}>
+            <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 5.5rem)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, color: '#011936', margin: 0 }}>Prodotti <span style={{ color: 'rgba(1, 25, 54, 0.2)' }}>Plasmati.</span></h2>
+            <Link to="/portfolio" className="btn" style={{ padding: '1rem 2.5rem' }}>Vedi Tutti i Lavori</Link>
+          </div>
+        </motion.div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))', gap: '2.5rem' }}>
+          {featuredProjects.map((proj, idx) => (
+             <motion.div 
+               key={idx}
+               initial={{ opacity: 0, y: 30 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               transition={{ delay: idx * 0.15 }}
+               viewport={{ once: true }}
+               style={{
+                 position: 'relative',
+                 overflow: 'hidden',
+                 borderRadius: '30px',
+                 backgroundColor: `rgba(${proj.brandColor}, 0.02)`,
+                 border: `1px solid rgba(${proj.brandColor}, 0.15)`,
+                 display: 'flex',
+                 flexDirection: 'column',
+                 height: '100%',
+                 transition: 'all 0.4s'
+               }}
+               whileHover={{ y: -10, boxShadow: `0 20px 40px rgba(${proj.brandColor}, 0.1)`, border: `1px solid rgba(${proj.brandColor}, 0.4)` }}
+             >
+               <div style={{ height: '300px', width: '100%', position: 'relative', overflow: 'hidden' }}>
+                 <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: `linear-gradient(to bottom, transparent 40%, rgba(${proj.brandColor}, 0.05))` }} />
+                 <img src={proj.image} alt={proj.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+               </div>
+               
+               <div style={{ padding: isMobile ? '2rem' : '2.5rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                 <h3 style={{ fontSize: '2.2rem', fontWeight: 900, letterSpacing: '-0.03em', color: `rgb(${proj.brandColor})`, marginBottom: '1rem' }}>{proj.title}</h3>
+                 <p style={{ color: '#475569', fontSize: '1.15rem', lineHeight: 1.6, fontWeight: 500 }}>{proj.desc}</p>
+                 
+                 <div style={{ marginTop: 'auto', paddingTop: '2.5rem' }}>
+                   <Link to="/portfolio" style={{ color: `rgb(${proj.brandColor})`, fontWeight: 700, display: 'flex', alignItems: 'center', textDecoration: 'none', fontSize: '1.05rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                     Scopri Progetto <ArrowRight size={18} style={{ marginLeft: '10px' }} />
+                   </Link>
+                 </div>
+               </div>
+             </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 export const FooterCTA = () => {
   return (
     <div style={{ padding: '8rem 5%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', position: 'relative', overflow: 'hidden' }}>
@@ -693,6 +771,9 @@ const Home = () => {
           <PhasesInteractive />
         </div>
       </section>
+
+      {/* PORTFOLIO HIGHLIGHTS */}
+      <PortfolioHomeTeaser />
 
       {/* 5. OFFERING TEASER */}
       <section className="section theme-light" style={{ width: '100vw', height: isMobile ? 'auto' : '100vh', minHeight: '100vh', flexShrink: 0, position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: isMobile ? '5rem 0' : 0, backgroundColor: '#ffffff' }}>

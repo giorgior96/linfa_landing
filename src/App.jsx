@@ -255,7 +255,7 @@ const OfferingsInteractive = () => {
       <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginBottom: '4rem', flexWrap: 'wrap' }}>
         {tabs.map((tab) => {
           const isAct = activeTab === tab;
-          const tabRgb = categoryColors[tab];
+          const tabRgb = tab === 'Tutti' ? '1, 25, 54' : categoryColors[tab];
 
           return (
             <button

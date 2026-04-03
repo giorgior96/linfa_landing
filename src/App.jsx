@@ -565,7 +565,7 @@ const PortfolioHomeTeaser = () => {
   const isMobile = useIsMobile();
   return (
     <section className="section theme-light" style={{ padding: isMobile ? '5rem 0' : '8rem 5%', backgroundColor: '#ffffff', position: 'relative' }}>
-      <div style={{ maxWidth: '1400px', margin: '0 auto', display: 'flex', flexDirection: 'column', padding: '0 5%' }}>
+      <div style={{ maxWidth: '1800px', margin: '0 auto', display: 'flex', flexDirection: 'column', padding: '0 5%' }}>
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <p className="text-accent" style={{ fontWeight: 700, marginBottom: '1rem', fontSize: '1rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>// PORTFOLIO HIGHLIGHTS</p>
           <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', justifyContent: 'space-between', alignItems: isMobile ? 'flex-start' : 'flex-end', marginBottom: '3rem', flexWrap: 'wrap', gap: '2rem' }}>
@@ -585,11 +585,11 @@ const PortfolioHomeTeaser = () => {
                style={{
                  position: 'relative',
                  overflow: 'hidden',
-                 borderRadius: '40px',
+                 borderRadius: '48px',
                  backgroundColor: `rgb(${proj.brandColor})`,
                  display: 'flex',
                  flexDirection: 'column',
-                 height: isMobile ? '550px' : '650px',
+                 height: isMobile ? '550px' : '750px',
                  transition: 'all 0.4s'
                }}
                whileHover={{ y: -10, boxShadow: `0 20px 40px rgba(${proj.brandColor}, 0.5)` }}

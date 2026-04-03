@@ -33,7 +33,7 @@ const VisionSection = () => {
   return (
     <section ref={ref} className="section theme-light" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '8rem 0' }}>
       <div style={{ padding: '0 5%' }}>
-        <h2 style={{ fontSize: 'clamp(2.5rem, 6.5vw, 6.5rem)', maxWidth: '1400px', textAlign: 'center', lineHeight: 1.15, fontWeight: 900, letterSpacing: '-0.04em', margin: 0 }}>
+        <h2 style={{ fontSize: 'clamp(2rem, 6.5vw, 6.5rem)', maxWidth: '1400px', textAlign: 'center', lineHeight: 1.15, fontWeight: 900, letterSpacing: '-0.04em', margin: 0 }}>
           {words.map((word, i) => {
             const start = i / (words.length + 3);
             const end = start + (1 / (words.length + 3));
@@ -147,7 +147,7 @@ const PhasesInteractive = () => {
               transition={{ duration: 0.6, ease: "easeOut" }}
               style={{ position: 'relative', zIndex: 1 }}
             >
-              <h3 style={{ fontSize: 'clamp(2.2rem, 3.5vw, 3.5rem)', color: '#011936', fontWeight: 900, marginBottom: '1.5rem', lineHeight: 1, letterSpacing: '-0.04em' }}>
+              <h3 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3.5rem)', color: '#011936', fontWeight: 900, marginBottom: '1.5rem', lineHeight: 1, letterSpacing: '-0.04em' }}>
                 {phase.title}
               </h3>
               <p style={{ color: '#475569', fontSize: 'clamp(1.1rem, 1.4vw, 1.35rem)', lineHeight: 1.7, fontWeight: 500, maxWidth: '850px', margin: 0 }}>
@@ -311,7 +311,7 @@ const OfferingsInteractive = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -30, transition: { duration: 0.2 } }}
           transition={{ duration: 0.5, staggerChildren: 0.1 }}
-          style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(420px, 1fr))', gap: '3rem' }}
+          style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 420px), 1fr))', gap: '3rem' }}
         >
           {currentItems.map((item, idx) => {
             const itemRgb = categoryColors[item.category];
@@ -574,7 +574,7 @@ export const FooterCTA = () => {
           // Inizia il tuo viaggio
         </p>
 
-        <h2 style={{ fontSize: 'clamp(3rem, 10vw, 7.5rem)', lineHeight: 0.9, textTransform: 'uppercase', fontWeight: 900, letterSpacing: '-0.04em', marginBottom: '2rem', color: '#ffffff' }}>
+        <h2 style={{ fontSize: 'clamp(2.5rem, 10vw, 7.5rem)', lineHeight: 0.9, textTransform: 'uppercase', fontWeight: 900, letterSpacing: '-0.04em', marginBottom: '2rem', color: '#ffffff' }}>
           PRONTI AL<br />
           <span style={{ color: 'transparent', WebkitTextStroke: '2px rgba(255,255,255,0.9)' }}>LANCIO?</span>
         </h2>
@@ -649,7 +649,7 @@ const Home = () => {
                 // Growth Partner Strategico
             </p>
 
-            <h1 style={{ fontSize: 'clamp(3rem, 10vw, 7.5rem)', lineHeight: 0.9, textTransform: 'uppercase', fontWeight: 900, letterSpacing: '-0.04em', marginBottom: '2rem', color: '#ffffff' }}>
+            <h1 style={{ fontSize: 'clamp(2.5rem, 10vw, 7.5rem)', lineHeight: 0.9, textTransform: 'uppercase', fontWeight: 900, letterSpacing: '-0.04em', marginBottom: '2rem', color: '#ffffff' }}>
               DA ZERO<br />
               ALLA VERA<br />
               <span style={{ color: 'transparent', WebkitTextStroke: '2px rgba(255,255,255,0.9)' }}>TRACTION.</span>
@@ -675,7 +675,7 @@ const Home = () => {
             <p className="text-accent" style={{ fontWeight: 700, fontSize: '1rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '1rem' }}>
               // Le nostre competenze
             </p>
-            <h2 style={{ fontSize: 'clamp(3.5rem, 6vw, 5.5rem)', color: '#011936', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1 }}>
+            <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 5.5rem)', color: '#011936', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1 }}>
               La nostra <span style={{ color: '#011936' }}>specializzazione.</span>
             </h2>
           </div>
@@ -688,7 +688,7 @@ const Home = () => {
         <div style={{ maxWidth: '1400px', width: '100%', margin: '0 auto', position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
             <p className="text-accent" style={{ fontWeight: 700, marginBottom: '1rem', fontSize: '1rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>// IL NOSTRO PROCESSO</p>
-            <h2 style={{ fontSize: 'clamp(3.5rem, 6vw, 5.5rem)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, color: '#011936', marginBottom: '2rem' }}>Le nostre <span className="text-accent">fasi strategiche.</span></h2>
+            <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 5.5rem)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, color: '#011936', marginBottom: '2rem' }}>Le nostre <span className="text-accent">fasi strategiche.</span></h2>
           </motion.div>
           <PhasesInteractive />
         </div>
@@ -698,7 +698,7 @@ const Home = () => {
       <section className="section theme-light" style={{ width: '100vw', height: isMobile ? 'auto' : '100vh', minHeight: '100vh', flexShrink: 0, position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: isMobile ? '5rem 0' : 0, backgroundColor: '#ffffff' }}>
 
         {/* Huge Typography Background */}
-        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: 'clamp(10rem, 15vw, 25rem)', fontWeight: 900, color: '#012c70', opacity: 0.15, whiteSpace: 'nowrap', zIndex: 0, pointerEvents: 'none', letterSpacing: '-0.05em' }}>
+        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: 'clamp(4rem, 15vw, 25rem)', fontWeight: 900, color: '#012c70', opacity: 0.15, whiteSpace: 'nowrap', zIndex: 0, pointerEvents: 'none', letterSpacing: '-0.05em' }}>
           ECOSISTEMA
         </div>
 
@@ -724,7 +724,7 @@ const Home = () => {
             width: '90%'
           }}
         >
-          <h2 style={{ fontSize: 'clamp(3rem, 5vw, 4.5rem)', color: '#011936', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, marginBottom: '1.5rem' }}>
+          <h2 style={{ fontSize: 'clamp(2.2rem, 8vw, 4.5rem)', color: '#011936', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, marginBottom: '1.5rem' }}>
             Un intero ecosistema<br />al tuo servizio.
           </h2>
 
@@ -757,7 +757,7 @@ const OfferingPage = () => {
         <div style={{ maxWidth: '1800px', width: '95%', margin: '0 auto', position: 'relative', zIndex: 1, padding: '2rem 2%' }}>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <p className="text-accent" style={{ fontWeight: 700, marginBottom: '1.5rem', fontSize: '1rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>// LA NOSTRA OFFERING</p>
-            <h2 style={{ fontSize: 'clamp(3.5rem, 7vw, 6.5rem)', color: '#011936', marginBottom: '2rem', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1 }}>Mettiti in <span className="text-accent">Vantaggio.</span></h2>
+            <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 6.5rem)', color: '#011936', marginBottom: '2rem', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1 }}>Mettiti in <span className="text-accent">Vantaggio.</span></h2>
             <p style={{ fontSize: '1.25rem', color: '#475569', maxWidth: '800px', margin: '0 auto', lineHeight: 1.6, fontWeight: 500 }}>Tecnologie avanzate, marketing strategico e consulenza business per dominare il mercato digitale.</p>
           </motion.div>
           <OfferingsInteractive />

@@ -127,7 +127,7 @@ const PortfolioCard = ({ project, index }) => {
         {/* Header row */}
         <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', justifyContent: 'space-between', alignItems: isMobile ? 'flex-start' : 'flex-end', marginBottom: isMobile ? '2rem' : '3rem', gap: '1.5rem' }}>
            <div style={{ maxWidth: '800px' }}>
-              <h2 style={{ fontSize: 'clamp(3rem, 5vw, 5.5rem)', fontWeight: 900, color: '#011936', letterSpacing: '-0.04em', lineHeight: 1, marginBottom: '1rem' }}>
+              <h2 style={{ fontSize: 'clamp(2rem, 5vw, 5.5rem)', fontWeight: 900, color: '#011936', letterSpacing: '-0.04em', lineHeight: 1, marginBottom: '1rem' }}>
                 {project.title}
               </h2>
               <p style={{ fontSize: '1.15rem', color: '#475569', marginBottom: '1.5rem', lineHeight: 1.5, fontWeight: 500 }}>
@@ -209,7 +209,7 @@ const Portfolio = () => {
       {/* Intro Header */}
       <div style={{ minHeight: '60vh', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', position: 'relative', zIndex: 50, backgroundColor: '#ffffff', paddingTop: '150px', paddingBottom: '3rem' }}>
         <p style={{ color: '#0370FF', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '1.5rem' }}>// I Nostri Lavori</p>
-        <h1 style={{ fontSize: 'clamp(3.5rem, 8vw, 8rem)', color: '#011936', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, textAlign: 'center', maxWidth: '1200px' }}>
+        <h1 style={{ fontSize: 'clamp(2.5rem, 8vw, 8rem)', color: '#011936', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, textAlign: 'center', maxWidth: '1200px' }}>
            Digital <span style={{ color: 'rgba(1, 25, 54, 0.2)' }}>Eccellenza.</span>
         </h1>
         <p style={{ color: '#475569', marginTop: '2rem', fontSize: '1.2rem', maxWidth: '600px', textAlign: 'center', lineHeight: 1.6, padding: '0 20px' }}>

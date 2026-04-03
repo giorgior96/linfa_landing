@@ -571,7 +571,7 @@ const PortfolioHomeTeaser = () => {
           </div>
         </motion.div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))', gap: '2.5rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)', gap: '2.5rem' }}>
           {featuredProjects.map((proj, idx) => (
              <motion.div 
                key={idx}
@@ -583,26 +583,26 @@ const PortfolioHomeTeaser = () => {
                  position: 'relative',
                  overflow: 'hidden',
                  borderRadius: '30px',
-                 backgroundColor: `rgba(${proj.brandColor}, 0.02)`,
-                 border: `1px solid rgba(${proj.brandColor}, 0.15)`,
+                 backgroundColor: `rgb(${proj.brandColor})`,
+                 border: `1px solid rgba(255, 255, 255, 0.1)`,
                  display: 'flex',
                  flexDirection: 'column',
                  height: '100%',
                  transition: 'all 0.4s'
                }}
-               whileHover={{ y: -10, boxShadow: `0 20px 40px rgba(${proj.brandColor}, 0.1)`, border: `1px solid rgba(${proj.brandColor}, 0.4)` }}
+               whileHover={{ y: -10, boxShadow: `0 20px 40px rgba(${proj.brandColor}, 0.5)`, border: `1px solid rgba(255, 255, 255, 0.3)` }}
              >
                <div style={{ height: '300px', width: '100%', position: 'relative', overflow: 'hidden' }}>
-                 <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: `linear-gradient(to bottom, transparent 40%, rgba(${proj.brandColor}, 0.05))` }} />
+                 <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: `linear-gradient(to bottom, transparent 30%, rgb(${proj.brandColor}))` }} />
                  <img src={proj.image} alt={proj.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                </div>
                
                <div style={{ padding: isMobile ? '2rem' : '2.5rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                 <h3 style={{ fontSize: '2.2rem', fontWeight: 900, letterSpacing: '-0.03em', color: `rgb(${proj.brandColor})`, marginBottom: '1rem' }}>{proj.title}</h3>
-                 <p style={{ color: '#475569', fontSize: '1.15rem', lineHeight: 1.6, fontWeight: 500 }}>{proj.desc}</p>
+                 <h3 style={{ fontSize: '2.2rem', fontWeight: 900, letterSpacing: '-0.03em', color: '#ffffff', marginBottom: '1rem' }}>{proj.title}</h3>
+                 <p style={{ color: 'rgba(255, 255, 255, 0.9)', fontSize: '1.15rem', lineHeight: 1.6, fontWeight: 500 }}>{proj.desc}</p>
                  
                  <div style={{ marginTop: 'auto', paddingTop: '2.5rem' }}>
-                   <Link to="/portfolio" style={{ color: `rgb(${proj.brandColor})`, fontWeight: 700, display: 'flex', alignItems: 'center', textDecoration: 'none', fontSize: '1.05rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                   <Link to="/portfolio" style={{ color: '#ffffff', fontWeight: 900, display: 'flex', alignItems: 'center', textDecoration: 'none', fontSize: '1.05rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                      Scopri Progetto <ArrowRight size={18} style={{ marginLeft: '10px' }} />
                    </Link>
                  </div>

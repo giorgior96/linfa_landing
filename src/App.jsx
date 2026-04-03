@@ -541,7 +541,7 @@ const featuredProjects = [
   {
     title: "GreenCart",
     desc: "L'Intelligenza Artificiale applicata all'efficienza della GDO. Piattaforma SaaS unificata zero-waste.",
-    image: "/portfolio/greencart_desktop.webp",
+    image: "/portfolio/greencart_mobile.webp",
     brandColor: "13, 148, 136", // #0d9488 RGB
     textColor: "#ffffff",
     centeredImage: true
@@ -618,8 +618,8 @@ const PortfolioHomeTeaser = () => {
                  </p>
                </div>
                
-               <div style={{ marginTop: 'auto', height: '55%', width: proj.centeredImage ? '80%' : '100%', marginLeft: proj.centeredImage ? '10%' : '8%', position: 'relative', overflow: 'hidden', borderTopLeftRadius: '24px', borderTopRightRadius: proj.centeredImage ? '24px' : '0' }}>
-                 <img src={proj.image} alt={proj.title} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: proj.centeredImage ? 'center top' : 'left top' }} />
+               <div style={{ marginTop: 'auto', height: '55%', width: '100%', marginLeft: proj.centeredImage ? '0' : '8%', position: 'relative', overflow: 'hidden', borderTopLeftRadius: '24px', borderTopRightRadius: proj.centeredImage ? '24px' : '0' }}>
+                 <img src={proj.image} alt={proj.title} style={{ width: '100%', height: '100%', objectFit: proj.centeredImage ? 'contain' : 'cover', objectPosition: proj.centeredImage ? 'bottom center' : 'left top' }} />
                </div>
              </motion.div>
           ))}

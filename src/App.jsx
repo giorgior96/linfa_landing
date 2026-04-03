@@ -447,21 +447,21 @@ const ServicesThreeBoxes = () => {
     {
       num: "01",
       title: "Sviluppo Tecnologico",
-      image: "/services/service_sviluppo.png",
+      image: "/services/service_sviluppo.webp",
       subtitle: "Ingegneria hardware e software avanzata.",
       desc: "Progettiamo ecosistemi cloud-native, web application e piattaforme complesse. Scriviamo codice pulito, modulare e orientato alla performance pura, trasformando sfide tecniche in vantaggi competitivi tangibili per dominare la tua nicchia."
     },
     {
       num: "02",
       title: "AI Training & Formazione",
-      image: "/services/service_ai_training.png",
+      image: "/services/service_ai_training.webp",
       subtitle: "Empowerment per i tuoi team interni.",
       desc: "Trasferiamo il nostro know-how in Intelligenza Artificiale direttamente nella tua azienda. Formiamo i tuoi sviluppatori sui migliori LLM e workflow AI, rendendo il team autonomo per integrare e scalare soluzioni generative proprietarie."
     },
     {
       num: "03",
       title: "Go-to-Market Strategico",
-      image: "/services/service_go_to_market.png",
+      image: "/services/service_go_to_market.webp",
       subtitle: "Dal rilascio alla vera trazione.",
       desc: "Un prodotto perfetto è inutile se nessuno lo usa. Architettiamo e lanciamo campagne di acquisizione ad altissime performance. Scaliamo i tuoi utenti con strategie di funnel avanzate, ottimizzando scientificamente conversioni e ROI."
     }

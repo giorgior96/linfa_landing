@@ -21,8 +21,8 @@ const projects = [
     tags: ["E-Commerce AI", "App Mobile", "SaaS"],
     url: "https://greencart.ai",
     brandColor: "#0d9488", // Teal
-    imageWeb: "/portfolio/greencart_desktop.png",
-    imageMobile: "/portfolio/greencart_mobile.png",
+    imageWeb: "/portfolio/greencart_desktop.webp",
+    imageMobile: "/portfolio/greencart_mobile.webp",
     isDualLayout: true
   },
   {
@@ -31,7 +31,7 @@ const projects = [
     tags: ["Marketplace", "Nautica", "Web App"],
     url: "https://batoo.it",
     brandColor: "#0370FF", // Blue
-    image: "/portfolio/batoo.png"
+    image: "/portfolio/batoo.webp"
   },
   {
     title: "Circlo",
@@ -39,8 +39,8 @@ const projects = [
     tags: ["Sostenibilità", "App Mobile", "Piattaforma"],
     url: "https://www.circloapp.eu/",
     brandColor: "#eab308", // Yellow
-    imageWeb: "/portfolio/circlo_desktop.png",
-    imageMobile: "/portfolio/circlo_mobile.png",
+    imageWeb: "/portfolio/circlo_desktop.webp",
+    imageMobile: "/portfolio/circlo_mobile.webp",
     isDualLayout: true
   },
   {
@@ -49,7 +49,7 @@ const projects = [
     tags: ["Digital Identity", "Web Platform", "Politica"],
     url: "https://mauriziolupi.it",
     brandColor: "#be123c", // Rose
-    image: "/portfolio/lupi.png"
+    image: "/portfolio/lupi.webp"
   },
   {
     title: "Noi Moderati",
@@ -57,7 +57,7 @@ const projects = [
     tags: ["Web Platform", "Politica", "CMS Custom"],
     url: "https://noimoderati.it",
     brandColor: "#1e40af", // Blue
-    image: "/portfolio/noimoderati.png"
+    image: "/portfolio/noimoderati.webp"
   },
   {
     title: "Navisnet",
@@ -65,7 +65,7 @@ const projects = [
     tags: ["B2B SaaS", "Nautica", "Gestione Concessionari"],
     url: "#",
     brandColor: "#0284c7", // Light Blue
-    image: "/portfolio/navisnet.png"
+    image: "/portfolio/navisnet.webp"
   }
 ];
 

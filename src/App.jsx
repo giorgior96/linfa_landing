@@ -543,7 +543,8 @@ const featuredProjects = [
     desc: "L'Intelligenza Artificiale applicata all'efficienza della GDO. Piattaforma SaaS unificata zero-waste.",
     image: "/portfolio/greencart_desktop.webp",
     brandColor: "13, 148, 136", // #0d9488 RGB
-    textColor: "#ffffff"
+    textColor: "#ffffff",
+    centeredImage: true
   },
   {
     title: "Batoo",
@@ -617,8 +618,8 @@ const PortfolioHomeTeaser = () => {
                  </p>
                </div>
                
-               <div style={{ marginTop: 'auto', height: '55%', width: '100%', marginLeft: '8%', position: 'relative', overflow: 'hidden', borderTopLeftRadius: '24px' }}>
-                 <img src={proj.image} alt={proj.title} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'left top' }} />
+               <div style={{ marginTop: 'auto', height: '55%', width: '100%', marginLeft: proj.centeredImage ? '0' : '8%', position: 'relative', overflow: 'hidden', borderTopLeftRadius: '24px', borderTopRightRadius: proj.centeredImage ? '24px' : '0' }}>
+                 <img src={proj.image} alt={proj.title} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: proj.centeredImage ? 'center top' : 'left top' }} />
                </div>
              </motion.div>
           ))}

@@ -484,14 +484,14 @@ const ServicesThreeBoxes = () => {
            {/* Gradient Overlay for Text Readability - Bottom Heavy */}
            <motion.div 
              variants={{
-               initial: { opacity: 0.85 },
-               hover: { opacity: 0.95 }
+               initial: { opacity: 0.9 },
+               hover: { opacity: 1 }
              }}
              transition={{ duration: 0.4 }}
              style={{ 
                position: 'absolute', 
                inset: 0, 
-               background: 'linear-gradient(to top, rgba(1, 25, 54, 1) 0%, rgba(1, 25, 54, 0.6) 40%, rgba(1, 25, 54, 0.05) 100%)',
+               background: 'linear-gradient(to top, rgba(1, 25, 54, 1) 0%, rgba(1, 25, 54, 0.9) 40%, rgba(1, 25, 54, 0.3) 100%)',
                zIndex: 1 
              }} 
            />
@@ -527,7 +527,7 @@ const ServicesThreeBoxes = () => {
                    hover: { y: -5, color: '#ffffff' }
                  }}
                  transition={{ duration: 0.3 }}
-                 style={{ fontSize: 'clamp(2rem, 3vw, 2.7rem)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, marginBottom: '1.2rem' }}
+                 style={{ fontSize: 'clamp(2rem, 3vw, 2.7rem)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, marginBottom: '1.2rem', textShadow: '0 4px 20px rgba(0,0,0,0.6)' }}
                >
                  {svc.title}
                </motion.h3>
@@ -537,7 +537,7 @@ const ServicesThreeBoxes = () => {
                    hover: { opacity: 1, y: -5 }
                  }}
                  transition={{ duration: 0.3 }}
-                 style={{ fontSize: '1.1rem', lineHeight: 1.6, color: 'rgba(255,255,255,0.95)', fontWeight: 500, margin: 0, paddingRight: '1rem' }}
+                 style={{ fontSize: '1.1rem', lineHeight: 1.6, color: 'rgba(255,255,255,0.95)', fontWeight: 500, margin: 0, paddingRight: '1rem', textShadow: '0 2px 10px rgba(0,0,0,0.8)' }}
                >
                  {svc.desc}
                </motion.p>
@@ -666,7 +666,7 @@ const PortfolioHomeTeaser = () => {
 export const FooterCTA = () => {
   const isMobile = useIsMobile();
   return (
-    <div id="contact" style={{ backgroundColor: '#011936', width: '100%', padding: '8rem 5%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', position: 'relative', overflow: 'hidden' }}>
+    <div id="contact" style={{ backgroundColor: '#011936', width: '100%', display: 'flex', flexDirection: 'column', minHeight: '100vh', position: 'relative', overflow: 'hidden' }}>
 
       {/* Background Glow */}
       <div style={{ position: 'absolute', bottom: '-20%', left: '50%', transform: 'translateX(-50%)', width: '60vw', height: '50vh', background: 'radial-gradient(ellipse at bottom, rgba(3, 112, 255, 0.4) 0%, rgba(1, 25, 54, 0) 70%)', zIndex: 0, pointerEvents: 'none' }} />
@@ -694,8 +694,8 @@ export const FooterCTA = () => {
         </div>
       </motion.div>
 
-      {/* Contenuto in primo piano */}
-      <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', width: '100%', maxWidth: '1200px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      {/* Area Contenuti Form */}
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: isMobile ? '6rem 1rem 3rem 1rem' : '8rem 5% 4rem 5%', position: 'relative', zIndex: 2, width: '100%' }}>
 
         <p style={{ fontWeight: 700, fontSize: '1rem', marginBottom: '1.5rem', letterSpacing: '0.2em', color: '#38bdf8', textTransform: 'uppercase' }}>
           // Inizia la tua evoluzione
@@ -760,14 +760,13 @@ export const FooterCTA = () => {
           </form>
         </div>
       </div>
-
-      {/* FOOTER BAR */}
-      <div style={{ position: 'absolute', bottom: '0', left: 0, width: '100%', padding: '2rem 4rem', display: 'flex', justifyContent: 'space-between', borderTop: '1px solid rgba(255,255,255,0.1)', alignItems: 'center', color: '#a1a1aa', zIndex: 2 }}>
-        <div>
+      {/* FOOTER BAR (Non absolute, spinta in fondo tramite normal flow) */}
+      <div style={{ padding: isMobile ? '2rem 1.5rem' : '2rem 4rem', display: 'flex', flexDirection: isMobile ? 'column' : 'row', justifyContent: 'space-between', alignItems: 'center', borderTop: '1px solid rgba(255,255,255,0.1)', color: '#a1a1aa', zIndex: 2, gap: isMobile ? '1.5rem' : 0, width: '100%' }}>
+        <div style={{ textAlign: isMobile ? 'center' : 'left' }}>
           <img src="/Logo/Horizontal.svg" alt="Linfa" style={{ height: 30, filter: 'brightness(0) invert(1)' }} onError={(e) => { e.target.style.display = 'none' }} />
-          <div style={{ marginTop: '0.5rem', fontSize: '0.875rem' }}>© {new Date().getFullYear()} Linfa Tech. P.IVA 14435250965</div>
+          <div style={{ marginTop: '0.5rem', fontSize: '0.85rem' }}>© {new Date().getFullYear()} Linfa Tech. P.IVA 14435250965</div>
         </div>
-        <div style={{ display: 'flex', gap: '1.5rem' }}>
+        <div style={{ display: 'flex', gap: isMobile ? '1rem' : '1.5rem', flexWrap: 'wrap', justifyContent: 'center', fontSize: isMobile ? '0.85rem' : '1rem' }}>
           <a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>info@linfa.tech</a>
           <a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>Privacy & Cookie Policy</a>
         </div>

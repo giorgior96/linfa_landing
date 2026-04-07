@@ -25,13 +25,14 @@ const Word = ({ children, progress, range }) => {
 };
 
 const VisionSection = () => {
+  const isMobile = useIsMobile();
   const text = "Non ci limitiamo a scrivere codice. Sviluppiamo le fondamenta tecnologiche del tuo business. Dall'idea iniziale al successo globale, siamo il partner affidabile per la tua crescita.";
   const words = text.split(" ");
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start 80%", "end 50%"] });
 
   return (
-    <section ref={ref} className="section theme-light" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '8rem 0' }}>
+    <section ref={ref} className="section theme-light" style={{ minHeight: isMobile ? '70vh' : '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: isMobile ? '3rem 0' : '8rem 0' }}>
       <div style={{ padding: '0 5%' }}>
         <h2 style={{ fontSize: 'clamp(2rem, 6.5vw, 6.5rem)', maxWidth: '1400px', textAlign: 'center', lineHeight: 1.15, fontWeight: 900, letterSpacing: '-0.04em', margin: 0 }}>
           {words.map((word, i) => {
@@ -459,6 +460,7 @@ const ServicesThreeBoxes = () => {
             whileHover="hover"
             style={{
               flex: 1,
+              width: '100%',
               height: isMobile ? '450px' : '650px',
               borderRadius: '32px',
               position: 'relative',
@@ -853,12 +855,12 @@ const Home = () => {
       </section>
 
       {/* 2. VISION SECTION */}
-      <div style={{ width: '100vw', minHeight: '100vh', backgroundColor: 'var(--bg-light)' }}>
+      <div style={{ width: '100vw', minHeight: isMobile ? 'auto' : '100vh', backgroundColor: 'var(--bg-light)' }}>
         <VisionSection />
       </div>
 
       {/* 3. SERVICES SECTION */}
-      <section className="section theme-light" style={{ width: '100vw', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: isMobile ? '80px 5% 40px 5%' : '80px 2% 0 2%', position: 'relative', backgroundColor: '#ffffff' }}>
+      <section className="section theme-light" style={{ width: '100vw', minHeight: isMobile ? 'auto' : '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: isMobile ? '40px 5% 80px 5%' : '80px 2% 0 2%', position: 'relative', backgroundColor: '#ffffff' }}>
         <div style={{ position: 'relative', zIndex: 10, width: '100%', maxWidth: '1850px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', margin: '0 auto' }}>
           <div style={{ marginBottom: isMobile ? '1.5rem' : '2.5rem', paddingLeft: '0.5rem' }}>
             <p className="text-accent" style={{ fontWeight: 700, fontSize: '1rem', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '1rem' }}>

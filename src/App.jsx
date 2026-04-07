@@ -553,7 +553,7 @@ const ServicesThreeBoxes = () => {
 const featuredProjects = [
   {
     title: "GreenCart",
-    desc: "L'Intelligenza Artificiale a supporto della sostenibilità GDO. Una piattaforma SaaS innovativa che minimizza attivamente gli sprechi integrando un intuitivo portafoglio digitale.",
+    desc: "L'app di cashback sostenibile. Scansiona scontrini, acquista responsabilmente e guadagna ricompense reali tracciate, tramite il nostro ecosistema wallet integrato.",
     image: "/portfolio/greencart_mobile.webp",
     brandColor: "13, 148, 136", // #0d9488 RGB
     textColor: "#ffffff",
@@ -561,14 +561,14 @@ const featuredProjects = [
   },
   {
     title: "Batoo",
-    desc: "L'evoluzione del mercato nautico in Europa. Un portale innovativo che unisce e rende immediate le transazioni tra operatori in un solido e moderno ecosistema tecnologico.",
+    desc: "Il salone nautico digitale di nuova generazione. Sfrutta avanzati modelli di IA per semplificare l'esplorazione del mercato e incrociare acquirenti e imbarcazioni in tempo reale.",
     image: "/portfolio/batoo.webp",
     brandColor: "3, 112, 255", // #0370FF RGB
     textColor: "#ffffff"
   },
   {
     title: "Circlo",
-    desc: "Il vero impatto ecologico tramite una rapida gestione del wallet. Una piattaforma solida e fluida per rafforzare e snellire la filiera della tracciabilità e dell'eco-retail.",
+    desc: "L'alleato urbano della moda circolare. Un'app progettata per organizzare il tuo guardaroba e permetterti di prenotare e attivare servizi di upcycling nella tua città.",
     image: "/portfolio/circlo_desktop.webp",
     brandColor: "234, 179, 8", // #eab308 RGB
     textColor: "#011936"
@@ -582,9 +582,8 @@ const PortfolioHomeTeaser = () => {
       <div style={{ maxWidth: '1800px', margin: '0 auto', display: 'flex', flexDirection: 'column', padding: '0 5%' }}>
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <p className="text-accent" style={{ fontWeight: 700, marginBottom: '1rem', fontSize: '1rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>// PORTFOLIO HIGHLIGHTS</p>
-          <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', justifyContent: 'space-between', alignItems: isMobile ? 'flex-start' : 'flex-end', marginBottom: '3rem', flexWrap: 'wrap', gap: '2rem' }}>
+          <div style={{ marginBottom: '4rem' }}>
             <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 5.5rem)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, color: '#011936', margin: 0 }}>Prodotti <span style={{ color: 'rgba(1, 25, 54, 0.2)' }}>Digitali.</span></h2>
-            <Link to="/portfolio" className="btn" style={{ padding: '1rem 2.5rem' }}>Vedi Tutti i Lavori</Link>
           </div>
         </motion.div>
 
@@ -658,6 +657,12 @@ const PortfolioHomeTeaser = () => {
              </motion.div>
           ))}
         </div>
+
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ display: 'flex', justifyContent: 'center', marginTop: '4rem' }}>
+           <Link to="/portfolio" className="btn" style={{ padding: '1.2rem 3.5rem', fontSize: '1.15rem', borderRadius: '100px' }}>
+             Vedi Tutti i Nostri Lavori <ArrowRight size={22} style={{ marginLeft: '0.75rem' }} />
+           </Link>
+        </motion.div>
       </div>
     </section>
   );

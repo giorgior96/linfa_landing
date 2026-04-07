@@ -451,9 +451,11 @@ p {
   box-shadow: 0 30px 60px rgba(0,0,0,0.4);
   width: 100%;
   max-width: 650px;
-  z-index: 2;
+  z-index: 10;
   position: relative;
   overflow: hidden;
+  isolation: isolate;
+  transform: translateZ(0);
 }
 
 .premium-input-group {

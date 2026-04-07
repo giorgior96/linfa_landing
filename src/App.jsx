@@ -324,16 +324,14 @@ const OfferingsInteractive = () => {
                 <p style={{ color: '#475569', fontSize: '1.1rem', marginBottom: '2.5rem', lineHeight: 1.6 }}>{item.subtitle}</p>
 
                 <div style={{ marginTop: 'auto' }}>
-                  <div style={{ borderTop: '1px solid rgba(1, 25, 54, 0.05)', paddingTop: '1.5rem', flex: 1, display: 'flex', flexWrap: 'wrap', columnGap: '0.75rem', rowGap: '0.4rem', alignItems: 'center' }}>
+                  <ul style={{ borderTop: '1px solid rgba(1, 25, 54, 0.05)', paddingTop: '1.5rem', flex: 1, display: 'flex', flexDirection: 'column', gap: '0.75rem', paddingLeft: 0, margin: 0, listStyle: 'none' }}>
                     {item.features.map((feat, fIdx) => (
-                      <React.Fragment key={fIdx}>
-                        <span style={{ color: '#011936', fontSize: '0.98rem', fontWeight: 700, letterSpacing: '0.01em' }}>{feat}</span>
-                        {fIdx < item.features.length - 1 && (
-                          <span style={{ color: `rgba(${itemRgb}, 0.6)`, fontWeight: 900 }}>/</span>
-                        )}
-                      </React.Fragment>
+                      <li key={fIdx} style={{ color: '#011936', fontSize: '1.05rem', fontWeight: 600, letterSpacing: '0.01em', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                        <span style={{ display: 'inline-block', width: '6px', height: '6px', borderRadius: '50%', backgroundColor: `rgb(${itemRgb})`, flexShrink: 0 }} />
+                        {feat}
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               </motion.div>
             );

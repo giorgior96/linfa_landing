@@ -25,7 +25,7 @@ const Word = ({ children, progress, range }) => {
 };
 
 const VisionSection = () => {
-  const text = "Non scriviamo solo codice. Costruiamo il motore tecnologico della tua visione. Dalla prima idea alla scalabilità globale, acceleriamo in modo decisivo il tuo successo.";
+  const text = "Non ci limitiamo a scrivere codice. Sviluppiamo le fondamenta tecnologiche del tuo business. Dall'idea iniziale al successo globale, siamo il partner affidabile per la tua crescita.";
   const words = text.split(" ");
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start 80%", "end 50%"] });
@@ -84,16 +84,16 @@ const PhasesInteractive = () => {
 
   const phases = [
     {
-      title: "Foundation & Architecture",
-      desc: "Niente esperimenti al buio. Progettiamo l'infrastruttura tecnologica e convalidiamo il modello di business con le logiche dei top player, prima ancora di scrivere una singola riga di codice, azzerando il rischio di spreco capitale."
+      title: "Strategy & Architettura",
+      desc: "Analizziamo a fondo i requisiti e l'infrastruttura tecnologica. Validiamo il modello di business per minimizzare il rischio d'impresa e assicurare fondamenta solide per lo sviluppo successivo."
     },
     {
-      title: "High-Performance Engineering",
-      desc: "Codice scritto esclusivamente per scalare. Sviluppiamo ecosistemi cloud-native e integriamo architetture di Intelligenza Artificiale per dominare enormi picchi di traffico minimizzando drasticamente i costi server."
+      title: "Sviluppo High-Performance",
+      desc: "Codice pulito e ottimizzato nativamente per la scalabilità. Sviluppiamo ecosistemi cloud integrando i più moderni framework e strumenti di Intelligenza Artificiale per dominare qualsiasi complessità."
     },
     {
-      title: "Hyper-Growth & Exit",
-      desc: "Ingegnerizziamo la tua acquisizione utenti come fosse un software algoritmico. Scateniamo funnel ad elevatissima conversione per saturare la tua nicchia, annientare il costo per lead e massimizzare la valutazione per il tuo prossimo Round o per l'Exit."
+      title: "Go-to-Market & Trazione",
+      desc: "Strutturiamo l'acquisizione utenti con un approccio altamente data-driven. Implementiamo pipeline ottimizzate per il ROI al fine di incrementare il valore effettivo dell'innovazione lanciata sul mercato."
     }
   ];
 
@@ -164,73 +164,53 @@ const PhasesInteractive = () => {
 
 const OfferingsInteractive = () => {
   const [activeTab, setActiveTab] = useState('Tutti');
-  const tabs = ['Tutti', 'Tech', 'Marketing', 'Business'];
+  const tabs = ['Tutti', 'Tech', 'Marketing'];
 
   const offeringsData = {
     Tech: [
       {
         title: "Web App & App Native",
-        subtitle: "MVP scalabili con architettura moderna e design user-centric.",
+        subtitle: "Sviluppo di MVP scalabili con architetture moderne e interfacce user-centric.",
         features: ["Sviluppo Agile & Rilasci Rapidi", "UI/UX Ottimizzata per Conversione", "Stack Tecnologico Moderno", "Architettura Cloud-Native"],
         icon: <MonitorSmartphone size={32} />
       },
       {
         title: "Intelligenza Artificiale",
-        subtitle: "Integrazione AI strategica per automatizzare processi e creare vantaggi competitivi.",
+        subtitle: "Integrazione AI strategica per innovare i processi e consolidare il vantaggio competitivo.",
         features: ["Machine Learning & Deep Learning", "NLP & Analisi Predittiva", "Computer Vision", "Automazione Intelligente"],
         icon: <Brain size={32} />
       },
       {
-        title: "Blockchain",
-        subtitle: "Soluzioni blockchain sicure per tracciabilità, smart contract e decentralizzazione.",
-        features: ["Smart Contract Sicuri", "DApp Development", "Tokenomics Design", "Web3 Integration"],
-        icon: <Code size={32} />
+        title: "AI Training & Formazione",
+        subtitle: "Trasferimento del know-how per ottimizzare processi, generare contenuti multimediali (es. video) e automatizzare task aziendali.",
+        features: ["Utilizzo Pratico degli LLM", "Generazione Video e Asset", "Automazione Task Ripetitivi", "Ottimizzazione Processi"],
+        icon: <Zap size={32} />
       }
     ],
     Marketing: [
       {
         title: "SEO",
-        subtitle: "Crescita organica strutturata. Visibilità online sostenibile.",
+        subtitle: "Strategie di crescita organica per un posizionamento duraturo nei motori di ricerca.",
         features: ["Keyword Research Avanzata", "Technical SEO", "Content Strategy", "Link Building Premium"],
         icon: <Search size={32} />
       },
       {
         title: "SEM",
-        subtitle: "Performance marketing immediato per risultati su scala (ROAS 5x+).",
-        features: ["Google Ads Strategy", "Meta Ads Optimization", "A/B Testing", "Conversion Funnel"],
+        subtitle: "Campagne data-driven orientate alla scalabilità e all'acquisizione efficiente nel tempo.",
+        features: ["Google Ads Strategy", "Meta Ads Optimization", "A/B Testing", "Ottimizzazione Conversioni"],
         icon: <Target size={32} />
       },
       {
-        title: "GEO",
-        subtitle: "Next-Gen AI-ready optimization per dominare i nuovi search engine.",
-        features: ["Ottimizzazione ricerca locale AI", "Miglioramento E-E-A-T", "Integrazione Schema geolocalizzato", "Ottimizzazione per ChatGPT, Perplexity, Gemini"],
+        title: "GEO & AI",
+        subtitle: "Ottimizzazione avanzata per i nuovi motori di ricerca conversazionali e piattaforme AI.",
+        features: ["Ottimizzazione ricerca locale", "Miglioramento E-E-A-T", "Integrazione Schema geolocalizzato", "Ottimizzazione per LLM"],
         icon: <MapPin size={32} />
       },
       {
         title: "Social Media",
-        subtitle: "High Engagement, Community Building & target Lead Generation.",
+        subtitle: "Posizionamento multicanale mirato alla lead generation e alla crescita della community.",
         features: ["Content Strategy", "Paid Social Ads", "Community Growth", "Influencer Campaigns"],
         icon: <Share2 size={32} />
-      }
-    ],
-    Business: [
-      {
-        title: "Business Model",
-        subtitle: "Progetta modelli di business scalabili per ridurre il rischio di mercato.",
-        features: ["Business Model Canvas & Value Prop", "Validazione Ipotesi (Lean Startup)", "Pricing Strategy & Posizionamento"],
-        icon: <Briefcase size={32} />
-      },
-      {
-        title: "Piani Finanziari",
-        subtitle: "Modelli finanziari esecutivi pronti per investitori e direzionale.",
-        features: ["Forecast P&L e Cash Flow 3-5 anni", "Analisi Fabbisogno Capitale", "Business Plan Esecutivo"],
-        icon: <Calculator size={32} />
-      },
-      {
-        title: "Ricerca Fondi",
-        subtitle: "Supporto totale per ottenere i finanziamenti necessari alla crescita in Europa e US.",
-        features: ["Pitch Deck & Investment Readiness", "Strategia Fundraising (VC, BA, Bandi)", "Term Sheet & Negoziazione"],
-        icon: <Handshake size={32} />
       }
     ]
   };
@@ -238,15 +218,13 @@ const OfferingsInteractive = () => {
   const categoryColors = {
     Tutti: '1, 25, 54',        // Navy Linfa
     Tech: '3, 112, 255',       // Blue Linfa
-    Marketing: '139, 92, 246', // Indigo
-    Business: '14, 165, 233'   // Sky Blue
+    Marketing: '139, 92, 246' // Indigo
   };
 
   const currentItems = activeTab === 'Tutti' 
     ? [
         ...offeringsData.Tech.map(i => ({...i, category: 'Tech'})), 
-        ...offeringsData.Marketing.map(i => ({...i, category: 'Marketing'})), 
-        ...offeringsData.Business.map(i => ({...i, category: 'Business'}))
+        ...offeringsData.Marketing.map(i => ({...i, category: 'Marketing'}))
       ] 
     : offeringsData[activeTab].map(i => ({...i, category: activeTab}));
 
@@ -304,7 +282,8 @@ const OfferingsInteractive = () => {
         })}
       </div>
 
-      <AnimatePresence mode='wait'>
+      <div style={{ minHeight: '800px', position: 'relative' }}>
+        <AnimatePresence mode='wait'>
         <motion.div
           key={activeTab}
           initial={{ opacity: 0, y: 30 }}
@@ -360,6 +339,7 @@ const OfferingsInteractive = () => {
           })}
         </motion.div>
       </AnimatePresence>
+      </div>
     </div>
   );
 };
@@ -430,7 +410,12 @@ const Navbar = () => {
       <div style={{ display: 'flex', gap: isMobile ? '1rem' : '2.5rem', alignItems: 'center' }}>
         <Link to="/portfolio" style={{ color: isLightTheme ? '#011936' : '#fff', textDecoration: 'none', fontWeight: 600, transition: '0.6s', fontSize: isMobile ? '0.85rem' : '1rem' }}>{isMobile ? 'Lavori' : 'Portfolio'}</Link>
         <Link to="/offering" style={{ color: isLightTheme ? '#011936' : '#fff', textDecoration: 'none', fontWeight: 600, transition: '0.6s', fontSize: isMobile ? '0.85rem' : '1rem' }}>{isMobile ? 'Offering' : 'La Nostra Offering'}</Link>
-        <a href="/#contact" className="btn" style={{ padding: isMobile ? '0.5rem 1.2rem' : '0.75rem 1.75rem', fontSize: isMobile ? '0.85rem' : '1rem', borderRadius: '100px' }}>
+        <a href="/#contact" onClick={(e) => {
+          if (location.pathname === '/') {
+            e.preventDefault();
+            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }} className="btn" style={{ padding: isMobile ? '0.5rem 1.2rem' : '0.75rem 1.75rem', fontSize: isMobile ? '0.85rem' : '1rem', borderRadius: '100px', textDecoration: 'none' }}>
           Inizia {!isMobile && 'Ora'} {!isMobile && <ArrowRight size={18} style={{ marginLeft: '0.5rem' }} />}
         </a>
       </div>
@@ -439,8 +424,6 @@ const Navbar = () => {
 };
 
 const ServicesThreeBoxes = () => {
-  const brandBlue = "#0370FF";
-  const brandDark = "#011936";
   const isMobile = useIsMobile();
 
   const services = [
@@ -448,91 +431,119 @@ const ServicesThreeBoxes = () => {
       num: "01",
       title: "Sviluppo Tecnologico",
       image: "/services/service_sviluppo.webp",
-      subtitle: "Ingegneria hardware e software avanzata.",
-      desc: "Progettiamo ecosistemi cloud-native, web application e piattaforme complesse. Scriviamo codice pulito, modulare e orientato alla performance pura, trasformando sfide tecniche in vantaggi competitivi tangibili per dominare la tua nicchia."
+      subtitle: "Ingegneria Software",
+      desc: "Realizziamo piattaforme complesse, ecosistemi cloud e web application di ultima generazione. Codice modulare e orientato alle prestazioni pure per trasformare la complessità tecnica in vantaggi reali."
     },
     {
       num: "02",
-      title: "AI Training & Formazione",
+      title: "Integrazione AI",
       image: "/services/service_ai_training.webp",
-      subtitle: "Empowerment per i tuoi team interni.",
-      desc: "Trasferiamo il nostro know-how in Intelligenza Artificiale direttamente nella tua azienda. Formiamo i tuoi sviluppatori sui migliori LLM e workflow AI, rendendo il team autonomo per integrare e scalare soluzioni generative proprietarie."
+      subtitle: "Automazione & LLM",
+      desc: "Portiamo l'Intelligenza Artificiale nei processi operativi. Sviluppiamo e integriamo solide soluzioni generative su misura pensate per ridurre i costi, automatizzare task ripetitivi e incrementare l'efficienza."
     },
     {
       num: "03",
-      title: "Go-to-Market Strategico",
+      title: "Go-to-Market",
       image: "/services/service_go_to_market.webp",
-      subtitle: "Dal rilascio alla vera trazione.",
-      desc: "Un prodotto perfetto è inutile se nessuno lo usa. Architettiamo e lanciamo campagne di acquisizione ad altissime performance. Scaliamo i tuoi utenti con strategie di funnel avanzate, ottimizzando scientificamente conversioni e ROI."
+      subtitle: "Lancio Strategico",
+      desc: "Garantiamo il reale posizionamento sul mercato. Strutturiamo solide pipeline di acquisizione data-driven e ottimizziamo i canali di conversione con approccio analitico per generare la massima performance."
     }
   ];
 
   return (
-    <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', width: '100%', maxWidth: '1850px', height: 'auto', gap: isMobile ? '1.5rem' : '3rem', margin: '0 auto', position: 'relative', zIndex: 10 }}>
-      {services.map((svc, i) => (
-        <div
-          key={i}
-          style={{
-            flex: 1,
-            background: 'linear-gradient(135deg, #011936 0%, #01244e 100%)',
-            border: `1px solid rgba(255,255,255,0.1)`,
-            boxShadow: `0 10px 30px rgba(0,0,0,0.2)`,
-            borderRadius: '24px',
-            display: 'flex',
-            flexDirection: 'column',
-            overflow: 'hidden',
-            position: 'relative'
-          }}>
+    <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', width: '100%', maxWidth: '1600px', gap: isMobile ? '1.5rem' : '2rem', margin: '0 auto', position: 'relative', zIndex: 10 }}>
+       {services.map((svc, i) => (
+         <motion.div
+            key={i}
+            initial="initial"
+            whileHover="hover"
+            style={{
+              flex: 1,
+              height: isMobile ? '450px' : '650px',
+              borderRadius: '32px',
+              position: 'relative',
+              overflow: 'hidden',
+              border: '1px solid rgba(1, 25, 54, 0.05)',
+              boxShadow: '0 20px 40px rgba(0,0,0,0.15)'
+            }}
+         >
+           {/* Background Image Container */}
+           <motion.div 
+             variants={{
+               initial: { scale: 1 },
+               hover: { scale: 1.05 }
+             }}
+             transition={{ duration: 0.8, ease: "easeOut" }}
+             style={{ position: 'absolute', inset: 0, zIndex: 0 }}
+           >
+             <img src={svc.image} alt={svc.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+           </motion.div>
 
-          {/* Image Presentation */}
-          <div style={{ width: '100%', height: isMobile ? '220px' : '260px', position: 'relative', overflow: 'hidden' }}>
-            <motion.img
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              src={svc.image}
-              alt={svc.title}
-              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', backgroundColor: '#0f172a' }}
-            />
-            <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(to bottom, transparent 40%, rgba(1, 25, 54, 1) 100%)', pointerEvents: 'none' }}></div>
+           {/* Gradient Overlay for Text Readability - Bottom Heavy */}
+           <motion.div 
+             variants={{
+               initial: { opacity: 0.85 },
+               hover: { opacity: 0.95 }
+             }}
+             transition={{ duration: 0.4 }}
+             style={{ 
+               position: 'absolute', 
+               inset: 0, 
+               background: 'linear-gradient(to top, rgba(1, 25, 54, 1) 0%, rgba(1, 25, 54, 0.6) 40%, rgba(1, 25, 54, 0.05) 100%)',
+               zIndex: 1 
+             }} 
+           />
 
-            {/* Architectural Giant Number Watermark over Image */}
-            <div style={{
-              position: 'absolute',
-              top: '5%',
-              right: '-2%',
-              fontSize: '12rem',
-              fontWeight: 900,
-              color: 'transparent',
-              WebkitTextStroke: `2px rgba(255, 255, 255, 0.4)`,
-              lineHeight: 0.8,
-              letterSpacing: '-0.06em',
-              zIndex: 0,
-              pointerEvents: 'none'
-            }}>
-              {svc.num}
-            </div>
-          </div>
+           {/* Content Wrapper */}
+           <div style={{ position: 'absolute', inset: 0, zIndex: 2, display: 'flex', flexDirection: 'column', padding: isMobile ? '2rem' : '3.5rem' }}>
+             
+             {/* Top Corner: Number & Subtitle Chip */}
+             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+               <div style={{ 
+                 backdropFilter: 'blur(20px)', 
+                 WebkitBackdropFilter: 'blur(20px)',
+                 background: 'rgba(255, 255, 255, 0.15)', 
+                 border: '1px solid rgba(255, 255, 255, 0.25)', 
+                 borderRadius: '100px', 
+                 padding: '0.6rem 1.2rem', 
+                 color: '#ffffff', 
+                 display: 'flex', 
+                 gap: '0.75rem',
+                 alignItems: 'center'
+               }}>
+                 <span style={{ fontWeight: 900, color: '#3b82f6' }}>{svc.num}</span>
+                 <span style={{ height: '4px', width: '4px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.6)' }} />
+                 <span style={{ fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>{svc.subtitle}</span>
+               </div>
+             </div>
 
-          <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', height: '100%', padding: isMobile ? '1.5rem 1.5rem 2.5rem 1.5rem' : '2rem 3rem 4rem 3rem' }}>
+             {/* Bottom Text */}
+             <div style={{ marginTop: 'auto' }}>
+               <motion.h3 
+                 variants={{
+                   initial: { y: 0, color: 'rgba(255,255,255, 0.95)' },
+                   hover: { y: -5, color: '#ffffff' }
+                 }}
+                 transition={{ duration: 0.3 }}
+                 style={{ fontSize: 'clamp(2rem, 3vw, 2.7rem)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, marginBottom: '1.2rem' }}
+               >
+                 {svc.title}
+               </motion.h3>
+               <motion.p 
+                 variants={{
+                   initial: { opacity: 0.85, y: 0 },
+                   hover: { opacity: 1, y: -5 }
+                 }}
+                 transition={{ duration: 0.3 }}
+                 style={{ fontSize: '1.1rem', lineHeight: 1.6, color: 'rgba(255,255,255,0.95)', fontWeight: 500, margin: 0, paddingRight: '1rem' }}
+               >
+                 {svc.desc}
+               </motion.p>
+             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '2.5rem' }}>
-              <h2 style={{ fontSize: 'clamp(2rem, 2.5vw, 2.8rem)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, color: '#ffffff', width: '80%' }}>
-                {svc.title}
-              </h2>
-            </div>
-
-            <p style={{ fontSize: '1.05rem', fontWeight: 600, color: '#e2e8f0', marginBottom: '1.5rem', letterSpacing: '-0.02em', textTransform: 'uppercase', opacity: 0.8 }}>
-              {svc.subtitle}
-            </p>
-
-            <div style={{ marginTop: 'auto', paddingTop: '1rem', borderTop: `1px solid rgba(255,255,255,0.1)` }}>
-              <p style={{ fontSize: 'clamp(1.05rem, 1.2vw, 1.25rem)', lineHeight: 1.8, color: '#cbd5e1', fontWeight: 500, margin: 0 }}>
-                {svc.desc}
-              </p>
-            </div>
-          </div>
-        </div>
-      ))}
+           </div>
+         </motion.div>
+       ))}
     </div>
   );
 };
@@ -540,7 +551,7 @@ const ServicesThreeBoxes = () => {
 const featuredProjects = [
   {
     title: "GreenCart",
-    desc: "L'Intelligenza Artificiale applicata all'efficienza della GDO. Piattaforma SaaS unificata zero-waste.",
+    desc: "L'Intelligenza Artificiale a supporto della sostenibilità GDO. Una piattaforma SaaS innovativa che minimizza attivamente gli sprechi integrando un intuitivo portafoglio digitale.",
     image: "/portfolio/greencart_mobile.webp",
     brandColor: "13, 148, 136", // #0d9488 RGB
     textColor: "#ffffff",
@@ -548,14 +559,14 @@ const featuredProjects = [
   },
   {
     title: "Batoo",
-    desc: "Il marketplace definitivo per il mercato nautico europeo. Ecosistema end-to-end immersivo e innovativo.",
+    desc: "L'evoluzione del mercato nautico in Europa. Un portale innovativo che unisce e rende immediate le transazioni tra operatori in un solido e moderno ecosistema tecnologico.",
     image: "/portfolio/batoo.webp",
     brandColor: "3, 112, 255", // #0370FF RGB
     textColor: "#ffffff"
   },
   {
     title: "Circlo",
-    desc: "Il futuro del vuoto a rendere. Wallet digitale su logiche blockchain per il recupero plastiche.",
+    desc: "Il vero impatto ecologico tramite una rapida gestione del wallet. Una piattaforma solida e fluida per rafforzare e snellire la filiera della tracciabilità e dell'eco-retail.",
     image: "/portfolio/circlo_desktop.webp",
     brandColor: "234, 179, 8", // #eab308 RGB
     textColor: "#011936"
@@ -570,7 +581,7 @@ const PortfolioHomeTeaser = () => {
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <p className="text-accent" style={{ fontWeight: 700, marginBottom: '1rem', fontSize: '1rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>// PORTFOLIO HIGHLIGHTS</p>
           <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', justifyContent: 'space-between', alignItems: isMobile ? 'flex-start' : 'flex-end', marginBottom: '3rem', flexWrap: 'wrap', gap: '2rem' }}>
-            <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 5.5rem)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, color: '#011936', margin: 0 }}>Prodotti <span style={{ color: 'rgba(1, 25, 54, 0.2)' }}>Plasmati.</span></h2>
+            <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 5.5rem)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, color: '#011936', margin: 0 }}>Prodotti <span style={{ color: 'rgba(1, 25, 54, 0.2)' }}>Digitali.</span></h2>
             <Link to="/portfolio" className="btn" style={{ padding: '1rem 2.5rem' }}>Vedi Tutti i Lavori</Link>
           </div>
         </motion.div>
@@ -651,8 +662,9 @@ const PortfolioHomeTeaser = () => {
 };
 
 export const FooterCTA = () => {
+  const isMobile = useIsMobile();
   return (
-    <div style={{ padding: '8rem 5%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', position: 'relative', overflow: 'hidden' }}>
+    <div id="contact" style={{ backgroundColor: '#011936', width: '100%', padding: '8rem 5%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', position: 'relative', overflow: 'hidden' }}>
 
       {/* Background Glow */}
       <div style={{ position: 'absolute', bottom: '-20%', left: '50%', transform: 'translateX(-50%)', width: '60vw', height: '50vh', background: 'radial-gradient(ellipse at bottom, rgba(3, 112, 255, 0.4) 0%, rgba(1, 25, 54, 0) 70%)', zIndex: 0, pointerEvents: 'none' }} />
@@ -681,26 +693,69 @@ export const FooterCTA = () => {
       </motion.div>
 
       {/* Contenuto in primo piano */}
-      <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', maxWidth: '800px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', width: '100%', maxWidth: '1200px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
-        <p style={{ fontWeight: 700, fontSize: '1rem', marginBottom: '1.5rem', letterSpacing: '0.2em', color: '#0370FF', textTransform: 'uppercase' }}>
-          // Inizia il tuo viaggio
+        <p style={{ fontWeight: 700, fontSize: '1rem', marginBottom: '1.5rem', letterSpacing: '0.2em', color: '#38bdf8', textTransform: 'uppercase' }}>
+          // Inizia la tua evoluzione
         </p>
 
         <h2 style={{ fontSize: 'clamp(2.5rem, 10vw, 7.5rem)', lineHeight: 0.9, textTransform: 'uppercase', fontWeight: 900, letterSpacing: '-0.04em', marginBottom: '2rem', color: '#ffffff' }}>
-          PRONTI AL<br />
-          <span style={{ color: 'transparent', WebkitTextStroke: '2px rgba(255,255,255,0.9)' }}>LANCIO?</span>
+          PRONTI A<br />
+          <span style={{ color: 'transparent', WebkitTextStroke: '2px rgba(255,255,255,0.9)' }}>SCALARE?</span>
         </h2>
 
-        <p style={{ fontSize: 'clamp(1.1rem, 1.2vw, 1.3rem)', maxWidth: '550px', marginBottom: '3rem', color: 'rgba(255,255,255,0.8)', lineHeight: 1.6 }}>
-          Dalla validazione al lancio. Esperienza comprovata in MVP, GTM e Fundraising. Inizia il tuo viaggio ora.
+        <p style={{ fontSize: 'clamp(1.1rem, 1.2vw, 1.3rem)', maxWidth: '550px', marginBottom: '4rem', color: 'rgba(255,255,255,0.8)', lineHeight: 1.6 }}>
+          Dalla validazione tecnica al lancio strategico sul mercato. Affidati ad un partner capace di tradurre le tue prime idee industriali in ecosistemi completi ed efficienti.
         </p>
-        <button className="btn" style={{ transform: 'scale(1.2)', zIndex: 2 }}>
-          Richiedi un'Analisi Gratuita
-        </button>
-        <div style={{ display: 'flex', gap: '2rem', marginTop: '3rem', color: 'rgba(255,255,255,0.7)' }}>
-          <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><CheckCircle size={16} color="#0370FF" /> Risposta in 24h</span>
-          <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><CheckCircle size={16} color="#0370FF" /> Nessun impegno</span>
+
+        {/* Struttura Premium Form */}
+        <div className="premium-form-card" style={{ padding: isMobile ? '2.5rem 1.5rem' : '4rem', maxWidth: '1050px', width: '100%' }}>
+          
+          <div style={{ marginBottom: '3rem', textAlign: 'center' }}>
+            <h3 style={{ color: '#ffffff', fontSize: '1.8rem', fontWeight: 800, letterSpacing: '-0.02em', marginBottom: '0.5rem' }}>Parlaci della tua visione.</h3>
+            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '1.1rem', margin: 0 }}>Compila i campi qui sotto. Il team tecnico ti risponderà entro 24 ore con una prima valutazione.</p>
+          </div>
+
+          <form style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }} onSubmit={(e) => e.preventDefault()}>
+            <div style={{ display: 'flex', gap: '2rem', flexDirection: isMobile ? 'column' : 'row' }}>
+              
+              {/* Colonna Sinistra: Anagrafica */}
+              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                <div className="premium-input-group">
+                  <label>Nome Completo</label>
+                  <input type="text" className="premium-input" placeholder="Es. Mario Rossi" />
+                </div>
+                <div style={{ display: 'flex', gap: '1.5rem', flexDirection: isMobile ? 'column' : 'row' }}>
+                  <div className="premium-input-group" style={{ flex: 1 }}>
+                    <label>Azienda / Startup</label>
+                    <input type="text" className="premium-input" placeholder="Es. Linfa Tech" />
+                  </div>
+                  <div className="premium-input-group" style={{ flex: 1 }}>
+                    <label>Email Lavorativa</label>
+                    <input type="email" className="premium-input" placeholder="mario@azienda.com" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Colonna Destra: Messaggio */}
+              <div style={{ flex: 1.2, display: 'flex', flexDirection: 'column' }}>
+                <div className="premium-input-group" style={{ height: '100%' }}>
+                  <label>Dettagli del Progetto</label>
+                  <textarea className="premium-input" style={{ flex: 1, minHeight: '140px' }} placeholder="Descrivi brevemente il tuo modello di business e le tue sfide attuali..."></textarea>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom Form Action */}
+            <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', justifyContent: 'space-between', alignItems: 'center', gap: '2rem', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2.5rem', marginTop: '0.5rem' }}>
+              <p style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.5)', margin: 0, textAlign: isMobile ? 'center' : 'left', maxWidth: '400px', lineHeight: 1.6 }}>
+                Compilando questo modulo confermi di aver preso visione della nostra informativa e accetti di essere ricontattato.
+              </p>
+              <button type="submit" className="btn" style={{ padding: '1.2rem 3rem', justifyContent: 'center', fontSize: '1.15rem', borderRadius: '100px', gap: '0.75rem', fontWeight: 800, width: isMobile ? '100%' : 'auto' }}>
+                Invia Richiesta <ArrowRight size={22} />
+              </button>
+            </div>
+          </form>
         </div>
       </div>
 
@@ -758,21 +813,42 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p style={{ fontWeight: 700, fontSize: isMobile ? '0.85rem' : '1rem', marginBottom: '1.5rem', letterSpacing: '0.2em', color: 'var(--accent)', textTransform: 'uppercase' }}>
-                // Growth Partner Strategico
+            <p style={{ fontWeight: 700, fontSize: isMobile ? '0.85rem' : '1rem', marginBottom: '1.5rem', letterSpacing: '0.2em', color: '#38bdf8', textTransform: 'uppercase' }}>
+                // Partner Strategico & Tecnologico
             </p>
 
             <h1 style={{ fontSize: 'clamp(2.5rem, 10vw, 7.5rem)', lineHeight: 0.9, textTransform: 'uppercase', fontWeight: 900, letterSpacing: '-0.04em', marginBottom: '2rem', color: '#ffffff' }}>
               DA ZERO<br />
               ALLA VERA<br />
-              <span style={{ color: 'transparent', WebkitTextStroke: '2px rgba(255,255,255,0.9)' }}>TRACTION.</span>
+              <span style={{ color: 'transparent', WebkitTextStroke: '2px rgba(255,255,255,0.9)' }}>CRESCITA.</span>
             </h1>
 
             <p style={{ fontSize: 'clamp(1.1rem, 1.2vw, 1.3rem)', maxWidth: '550px', marginBottom: '3rem', color: 'rgba(255,255,255,0.8)', lineHeight: 1.6 }}>
-              Acceleriamo la tua crescita integrando ingegneria avanzata e strategie di mercato. Convertiamo idee complesse in prodotti profittevoli.
+              Guidiamo l'evoluzione ecosistemica del tuo business combinando un'avanzata ingegneria software assieme alle migliori dinamiche di go-to-market.
             </p>
-            <button className="btn" style={{ display: 'inline-flex', padding: '1rem 2rem', fontSize: '1.1rem' }}>Inizia Ora <ArrowRight size={20} style={{ marginLeft: '0.5rem' }} /></button>
+            <a href="#contact" onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }} className="btn" style={{ display: 'inline-flex', padding: '1rem 2rem', fontSize: '1.1rem', textDecoration: 'none', cursor: 'pointer' }}>
+              Inizia Ora <ArrowRight size={20} style={{ marginLeft: '0.5rem' }} />
+            </a>
           </motion.div>
+        </div>
+
+        {/* Lavori Marquee (Infinite Ticker) */}
+        <div className="marquee-container">
+          <div className="marquee-track">
+            {[...Array(4)].map((_, i) => (
+              <div style={{ display: 'flex' }} key={i}>
+                <div className="marquee-item">GreenCart <span style={{ color: '#38bdf8' }}>•</span></div>
+                <div className="marquee-item">Batoo <span style={{ color: '#38bdf8' }}>•</span></div>
+                <div className="marquee-item">Circlo <span style={{ color: '#38bdf8' }}>•</span></div>
+                <div className="marquee-item">Maurizio Lupi <span style={{ color: '#38bdf8' }}>•</span></div>
+                <div className="marquee-item">Noi Moderati <span style={{ color: '#38bdf8' }}>•</span></div>
+                <div className="marquee-item">Navisnet <span style={{ color: '#38bdf8' }}>•</span></div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -845,16 +921,16 @@ const Home = () => {
           </h2>
 
           <p style={{ fontSize: 'clamp(1.1rem, 1.2vw, 1.3rem)', color: '#475569', marginBottom: '3rem', maxWidth: '650px', margin: '0 auto 3.5rem auto', lineHeight: 1.6, fontWeight: 500 }}>
-            Ingegneria hardware/software avanzata, performance marketing scientifico e venture building in un'unica offering strutturata per dominare il mercato digitale.
+            Competenze centralizzate che spaziano dall'innovazione tecnologica all'efficienza sul mercato: la soluzione completa per supportare i tuoi piani industriali.
           </p>
 
           <Link to="/offering" className="btn" style={{ display: 'inline-flex', alignItems: 'center', padding: '1.25rem 3rem', fontSize: '1.15rem' }}>
-            Esplora la Nostra Offering <ArrowRight size={22} style={{ marginLeft: '0.75rem' }} />
+            Scopri l'Offering <ArrowRight size={22} style={{ marginLeft: '0.75rem' }} />
           </Link>
         </div>
       </section>
       {/* 6. FOOTER CTA - SCROLL VERTICALE SOPRA LO SLIDER */}
-      <div style={{ position: 'relative', zIndex: 10, backgroundColor: '#011936', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <div style={{ position: 'relative', zIndex: 10, width: '100%', display: 'flex', flexDirection: 'column' }}>
         <FooterCTA />
       </div>
     </div>

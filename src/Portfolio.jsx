@@ -17,7 +17,7 @@ function useIsMobile() {
 const projects = [
   {
     title: "GreenCart",
-    desc: "L'Intelligenza Artificiale applicata all'efficienza della GDO. Una piattaforma SaaS unificata che abilita un e-commerce alimentare consapevole, premiando chi salva i prodotti in ottica zero-waste attraverso un wallet digitale perfettamente integrato.",
+    desc: "L'Intelligenza Artificiale al servizio della sostenibilità commerciale. Una versatile piattaforma SaaS che supporta un approccio consapevole e zero-waste tramite un intuitivo portafoglio digitale integrato.",
     tags: ["E-Commerce AI", "App Mobile", "SaaS"],
     url: "https://greencart.ai",
     brandColor: "#0d9488", // Teal
@@ -27,7 +27,7 @@ const projects = [
   },
   {
     title: "Batoo",
-    desc: "Il marketplace definitivo e olistico per il mercato nautico europeo. Batoo centralizza mediatori, concessionari e compratori in un unico ecosistema end-to-end, fungendo da vero e proprio salone nautico digitale permanente ed immersivo.",
+    desc: "La piattaforma di riferimento del mercato nautico in Europa. Un portale innovativo che unisce e rende immediate le interazioni tra mediatori, dealer e acquirenti in un solido ecosistema tecnologico.",
     tags: ["Marketplace", "Nautica", "Web App"],
     url: "https://batoo.it",
     brandColor: "#0370FF", // Blue
@@ -35,7 +35,7 @@ const projects = [
   },
   {
     title: "Circlo",
-    desc: "L'app mobile cross-platform che converte le azioni virtuose in un sistema di reward economici reali. Un'architettura ad elevate prestazioni per la gestione sicura del portafoglio degli utenti e la tracciabilità live nel mondo del retail ecosostenibile.",
+    desc: "L'app mobile che ricompensa l'impatto ecologico attraverso un sistema di gestione wallet basato su blockchain. Soluzioni sicure e fluide per supportare il settore dell'eco-retail.",
     tags: ["Sostenibilità", "App Mobile", "Piattaforma"],
     url: "https://www.circloapp.eu/",
     brandColor: "#eab308", // Yellow
@@ -45,7 +45,7 @@ const projects = [
   },
   {
     title: "Maurizio Lupi",
-    desc: "La piattaforma di comunicazione politica ad alte prestazioni basata su infrastrutture cloud ultra rapide. Un hub di identità digitale concepito per gestire enormi picchi di traffico mantenendo una navigazione informativa elegante e fluida.",
+    desc: "Piattaforma cloud ultra reattiva per la comunicazione pubblica e politica. Architettura concepita per gestire importanti sollecitazioni di traffico mantenendo uno stile istituzionale, autorevole ed elegante.",
     tags: ["Digital Identity", "Web Platform", "Politica"],
     url: "https://mauriziolupi.it",
     brandColor: "#be123c", // Rose
@@ -53,7 +53,7 @@ const projects = [
   },
   {
     title: "Noi Moderati",
-    desc: "L'ecosistema ufficiale web del movimento politico. Il sistema unisce backend CMS custom avanzato e gestione documentale multi-tier in una veste solida e accademica, pensata per comunicare autorevolezza e coinvolgere direttamente il cittadino.",
+    desc: "L'ecosistema web ufficiale del movimento politico, sostenuto da un solido CMS proprietario. Struttura pensata per una flessibile organizzazione documentale e un coinvolgimento civico diretto.",
     tags: ["Web Platform", "Politica", "CMS Custom"],
     url: "https://noimoderati.it",
     brandColor: "#1e40af", // Blue
@@ -61,7 +61,7 @@ const projects = [
   },
   {
     title: "Navisnet",
-    desc: "Il sistema gestionale B2B per professionisti del mare. Navisnet è il software su misura progettato per automatizzare le reti di concessionari nautici, semplificando incredibilmente l'inventario, la flotta e lo scambio barche tra broker a livello Europeo.",
+    desc: "Il gestionale SaaS focalizzato sull'indotto B2B e sui dealer professionisti. Un software potente, scalabile e sviluppato su misura per ottimizzare l'inventory management del panorama nautico.",
     tags: ["B2B SaaS", "Nautica", "Gestione Concessionari"],
     url: "#",
     brandColor: "#0284c7", // Light Blue
@@ -210,10 +210,10 @@ const Portfolio = () => {
       <div style={{ minHeight: '60vh', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', position: 'relative', zIndex: 50, backgroundColor: '#ffffff', paddingTop: '150px', paddingBottom: '3rem' }}>
         <p style={{ color: '#0370FF', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '1.5rem' }}>// I Nostri Lavori</p>
         <h1 style={{ fontSize: 'clamp(2.5rem, 8vw, 8rem)', color: '#011936', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, textAlign: 'center', maxWidth: '1200px' }}>
-           Digital <span style={{ color: 'rgba(1, 25, 54, 0.2)' }}>Eccellenza.</span>
+           Eccellenza <span style={{ color: 'rgba(1, 25, 54, 0.2)' }}>Digitale.</span>
         </h1>
         <p style={{ color: '#475569', marginTop: '2rem', fontSize: '1.2rem', maxWidth: '600px', textAlign: 'center', lineHeight: 1.6, padding: '0 20px' }}>
-           Esplora i prodotti tecnologici che abbiamo plasmato per le aziende più ambiziose.
+           Esplora le soluzioni su misura che abbiamo sviluppato per i progetti più ambiziosi.
         </p>
       </div>
 
@@ -229,7 +229,7 @@ const Portfolio = () => {
       </div>
 
       {/* Footer Buffer */}
-      <div style={{ position: 'relative', zIndex: 10, backgroundColor: '#011936', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <div style={{ position: 'relative', zIndex: 10, width: '100%', display: 'flex', flexDirection: 'column' }}>
         <FooterCTA />
       </div>
 

@@ -677,30 +677,28 @@ export const FooterCTA = () => {
       <div style={{ position: 'absolute', bottom: '-20%', left: '50%', transform: 'translateX(-50%)', width: '60vw', height: '50vh', background: 'radial-gradient(ellipse at bottom, rgba(3, 112, 255, 0.4) 0%, rgba(1, 25, 54, 0) 70%)', zIndex: 0, pointerEvents: 'none' }} />
 
       {/* Razzo Orbitante Naturale */}
-      {!isMobile && (
-        <div style={{ position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none', overflow: 'hidden' }}>
-          <motion.div
-            animate={{ rotate: [0, 360] }}
-            transition={{ duration: 35, ease: "linear", repeat: Infinity }}
-            style={{ 
-              position: 'absolute', 
-              top: '50%', 
-              left: '50%', 
-              width: '80vmin', 
-              height: '80vmin', 
-              marginTop: '-40vmin', 
-              marginLeft: '-40vmin', 
-              pointerEvents: 'none' 
-            }}
-          >
-            <div style={{ position: 'absolute', top: 0, left: '50%', transform: 'translate(-50%, -50%) rotate(90deg)', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <Rocket size={130} color="#ffffff" strokeWidth={0.8} style={{ transform: 'rotate(-45deg)', opacity: 0.95 }} />
-              {/* Scia Bianca Morbida */}
-              <div style={{ width: '8px', height: '18vh', background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.4), transparent)', filter: 'blur(8px)', marginTop: '-25px', borderRadius: '100px' }} />
-            </div>
-          </motion.div>
-        </div>
-      )}
+      <div style={{ position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none', overflow: 'hidden' }}>
+        <motion.div
+          animate={{ rotate: [0, 360] }}
+          transition={{ duration: 35, ease: "linear", repeat: Infinity }}
+          style={{ 
+            position: 'absolute', 
+            top: '50%', 
+            left: '50%', 
+            width: '80vmin', 
+            height: '80vmin', 
+            marginTop: '-40vmin', 
+            marginLeft: '-40vmin', 
+            pointerEvents: 'none' 
+          }}
+        >
+          <div style={{ position: 'absolute', top: 0, left: '50%', transform: 'translate(-50%, -50%) rotate(90deg)', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <Rocket size={130} color="#ffffff" strokeWidth={0.8} style={{ transform: 'rotate(-45deg)', opacity: 0.95 }} />
+            {/* Scia Bianca Morbida */}
+            <div style={{ width: '8px', height: '18vh', background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.4), transparent)', filter: 'blur(8px)', marginTop: '-25px', borderRadius: '100px' }} />
+          </div>
+        </motion.div>
+      </div>
 
       {/* Area Contenuti Form */}
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: isMobile ? '6rem 1rem 3rem 1rem' : '8rem 5% 4rem 5%', position: 'relative', zIndex: 10, width: '100%', transform: 'translateZ(0)' }}>

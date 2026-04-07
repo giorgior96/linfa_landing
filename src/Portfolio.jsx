@@ -17,7 +17,7 @@ function useIsMobile() {
 const projects = [
   {
     title: "GreenCart",
-    desc: "L'Intelligenza Artificiale al servizio della sostenibilità commerciale. Una versatile piattaforma SaaS che supporta un approccio consapevole e zero-waste tramite un intuitivo portafoglio digitale integrato.",
+    desc: "L'app di cashback sostenibile. Scansiona scontrini, acquista responsabilmente e guadagna ricompense reali. Offre un'esperienza wallet avanzata ed è nativamente integrata con la Gnosis Pay Visa Card per acquisti eco-reward.",
     tags: ["E-Commerce AI", "App Mobile", "SaaS"],
     url: "https://greencart.ai",
     brandColor: "#0d9488", // Teal
@@ -27,7 +27,7 @@ const projects = [
   },
   {
     title: "Batoo",
-    desc: "La piattaforma di riferimento del mercato nautico in Europa. Un portale innovativo che unisce e rende immediate le interazioni tra mediatori, dealer e acquirenti in un solido ecosistema tecnologico.",
+    desc: "Il salone nautico digitale e marketplace dell'usato di nuova generazione. Sfrutta avanzati algoritmi di Intelligenza Artificiale per semplificare l'esplorazione e agevolare la ricerca dinamica dell'imbarcazione perfetta.",
     tags: ["Marketplace", "Nautica", "Web App"],
     url: "https://batoo.it",
     brandColor: "#0370FF", // Blue
@@ -35,7 +35,7 @@ const projects = [
   },
   {
     title: "Circlo",
-    desc: "L'app mobile che ricompensa l'impatto ecologico attraverso un sistema di gestione wallet basato su blockchain. Soluzioni sicure e fluide per supportare il settore dell'eco-retail.",
+    desc: "L'alleato digitale della moda circolare. Un'app mobile progettata per riorganizzare il tuo guardaroba, incentivare l'uso sostenibile e permetterti di prenotare comodamente servizi urbani per dare nuova vita ai tuoi capi.",
     tags: ["Sostenibilità", "App Mobile", "Piattaforma"],
     url: "https://www.circloapp.eu/",
     brandColor: "#eab308", // Yellow
@@ -45,7 +45,7 @@ const projects = [
   },
   {
     title: "Maurizio Lupi",
-    desc: "Piattaforma cloud ultra reattiva per la comunicazione pubblica e politica. Architettura concepita per gestire importanti sollecitazioni di traffico mantenendo uno stile istituzionale, autorevole ed elegante.",
+    desc: "Il posizionamento digitale dell'Onorevole Maurizio Lupi. Un hub autorevole e performante che ripercorre le tappe della sua carriera, raccontando il lungo impegno politico e raccogliendo cronologicamente le milestone raggiunte.",
     tags: ["Digital Identity", "Web Platform", "Politica"],
     url: "https://mauriziolupi.it",
     brandColor: "#be123c", // Rose
@@ -53,7 +53,7 @@ const projects = [
   },
   {
     title: "Noi Moderati",
-    desc: "L'ecosistema web ufficiale del movimento politico, sostenuto da un solido CMS proprietario. Struttura pensata per una flessibile organizzazione documentale e un coinvolgimento civico diretto.",
+    desc: "L'identità online ufficiale del movimento politico. Una piattaforma informativa e relazionale dotata di solide logiche UX, pensata per trasmettere in modo incisivo la visione futura, la squadra dirigenziale e l'intero programma elettorale.",
     tags: ["Web Platform", "Politica", "CMS Custom"],
     url: "https://noimoderati.it",
     brandColor: "#1e40af", // Blue
@@ -61,7 +61,7 @@ const projects = [
   },
   {
     title: "Navisnet",
-    desc: "Il gestionale SaaS focalizzato sull'indotto B2B e sui dealer professionisti. Un software potente, scalabile e sviluppato su misura per ottimizzare l'inventory management del panorama nautico.",
+    desc: "Il potente gestionale SaaS enterprise rivolto ai broker nautici. Un sofisticato sistema modulare, sviluppato su misura per gestire, digitalizzare e ottimizzare quotidianamente i processi essenziali per tutti gli attori della nautica B2B.",
     tags: ["B2B SaaS", "Nautica", "Gestione Concessionari"],
     url: "#",
     brandColor: "#0284c7", // Light Blue

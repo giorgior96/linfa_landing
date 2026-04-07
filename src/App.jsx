@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import Lenis from 'lenis';
 import Portfolio from './Portfolio';
 
 function useIsMobile() {
@@ -970,7 +971,7 @@ import Lenis from 'lenis';
 function App() {
   useEffect(() => {
     const lenis = new Lenis({
-      lerp: 0.05,
+      lerp: 0.08,
       smoothWheel: true,
       wheelMultiplier: 1,
     });

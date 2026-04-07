@@ -802,39 +802,39 @@ const Home = () => {
 
         <div style={{
           position: 'absolute',
-          top: '50%',
+          top: isMobile ? '50%' : '53%',
           left: isMobile ? '50%' : 'auto',
           right: isMobile ? 'auto' : '5%',
           transform: isMobile ? 'translate(-50%, -50%)' : 'translateY(-50%)',
           width: isMobile ? '90%' : '100%',
-          maxWidth: '700px',
+          maxWidth: isMobile ? '600px' : '800px',
           zIndex: 10,
           textAlign: isMobile ? 'center' : 'left'
         }}>
           <motion.div
             className="liquid-glass-hero"
-            style={{ padding: isMobile ? '2rem' : '3rem', width: '100%' }}
+            style={{ padding: isMobile ? '2.5rem 1.5rem' : '4rem 4.5rem', width: '100%' }}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p style={{ fontWeight: 700, fontSize: isMobile ? '0.85rem' : '1rem', marginBottom: '1.5rem', letterSpacing: '0.2em', color: '#38bdf8', textTransform: 'uppercase' }}>
+            <p style={{ fontWeight: 700, fontSize: isMobile ? '0.85rem' : '1rem', marginBottom: '1.2rem', letterSpacing: '0.2em', color: '#38bdf8', textTransform: 'uppercase' }}>
                 // Partner Strategico & Tecnologico
             </p>
 
-            <h1 style={{ fontSize: 'clamp(2.5rem, 10vw, 7.5rem)', lineHeight: 0.9, textTransform: 'uppercase', fontWeight: 900, letterSpacing: '-0.04em', marginBottom: '2rem', color: '#ffffff' }}>
+            <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 5.5rem)', lineHeight: 0.95, textTransform: 'uppercase', fontWeight: 900, letterSpacing: '-0.04em', marginBottom: '1.5rem', color: '#ffffff' }}>
               DA ZERO<br />
               ALLA VERA<br />
               <span style={{ color: 'transparent', WebkitTextStroke: '2px rgba(255,255,255,0.9)' }}>CRESCITA.</span>
             </h1>
 
-            <p style={{ fontSize: 'clamp(1.1rem, 1.2vw, 1.3rem)', maxWidth: '550px', marginBottom: '3rem', color: 'rgba(255,255,255,0.8)', lineHeight: 1.6 }}>
+            <p style={{ fontSize: 'clamp(1rem, 1.2vw, 1.25rem)', maxWidth: '550px', color: 'rgba(255,255,255,0.8)', lineHeight: 1.6, margin: isMobile ? '0 auto 2.5rem auto' : '0 0 2.5rem 0' }}>
               Guidiamo l'evoluzione ecosistemica del tuo business combinando un'avanzata ingegneria software assieme alle migliori dinamiche di go-to-market.
             </p>
             <a href="#contact" onClick={(e) => {
               e.preventDefault();
               document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }} className="btn" style={{ display: 'inline-flex', padding: '1rem 2rem', fontSize: '1.1rem', textDecoration: 'none', cursor: 'pointer' }}>
+            }} className="btn" style={{ display: 'inline-flex', padding: '1rem 2.5rem', fontSize: '1.1rem', textDecoration: 'none', cursor: 'pointer' }}>
               Inizia Ora <ArrowRight size={20} style={{ marginLeft: '0.5rem' }} />
             </a>
           </motion.div>

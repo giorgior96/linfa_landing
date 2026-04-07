@@ -459,7 +459,7 @@ const ServicesThreeBoxes = () => {
             initial="initial"
             whileHover="hover"
             style={{
-              flex: 1,
+              flex: isMobile ? 'none' : 1,
               width: '100%',
               height: isMobile ? '450px' : '650px',
               borderRadius: '32px',

@@ -677,17 +677,18 @@ export const FooterCTA = () => {
       <div style={{ position: 'absolute', bottom: '-20%', left: '50%', transform: 'translateX(-50%)', width: '60vw', height: '50vh', background: 'radial-gradient(ellipse at bottom, rgba(3, 112, 255, 0.4) 0%, rgba(1, 25, 54, 0) 70%)', zIndex: 0, pointerEvents: 'none' }} />
 
       {/* Razzo Orbitante Naturale */}
-      <motion.div
-        animate={{ rotate: [0, 360] }}
-        transition={{ duration: 35, ease: "linear", repeat: Infinity }}
-        style={{ 
-          position: 'absolute', 
-          top: '50%', 
-          left: '50%', 
-          width: '80vmin', 
-          height: '80vmin', 
-          marginTop: '-40vmin', 
-          marginLeft: '-40vmin', 
+      {!isMobile && (
+        <motion.div
+          animate={{ rotate: [0, 360] }}
+          transition={{ duration: 35, ease: "linear", repeat: Infinity }}
+          style={{ 
+            position: 'absolute', 
+            top: '50%', 
+            left: '50%', 
+            width: '80vmin', 
+            height: '80vmin', 
+            marginTop: '-40vmin', 
+            marginLeft: '-40vmin', 
           zIndex: 0, 
           pointerEvents: 'none' 
         }}
@@ -698,6 +699,7 @@ export const FooterCTA = () => {
           <div style={{ width: '8px', height: '18vh', background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.4), transparent)', filter: 'blur(8px)', marginTop: '-25px', borderRadius: '100px' }} />
         </div>
       </motion.div>
+      )}
 
       {/* Area Contenuti Form */}
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: isMobile ? '6rem 1rem 3rem 1rem' : '8rem 5% 4rem 5%', position: 'relative', zIndex: 2, width: '100%' }}>

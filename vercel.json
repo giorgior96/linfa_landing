@@ -1,24 +1,5 @@
 {
-  "headers": [
-    {
-      "source": "/demo/aurelia/(.*)",
-      "headers": [
-        {
-          "key": "X-Robots-Tag",
-          "value": "noindex, nofollow, noarchive, nosnippet"
-        }
-      ]
-    }
-  ],
   "rewrites": [
-    {
-      "source": "/demo/aurelia",
-      "destination": "/demo/aurelia/index.html"
-    },
-    {
-      "source": "/demo/aurelia/",
-      "destination": "/demo/aurelia/index.html"
-    },
     {
       "source": "/(.*)",
       "destination": "/index.html"

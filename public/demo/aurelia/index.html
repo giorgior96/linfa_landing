@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <base href="/demo/aurelia/" />
+    <meta name="theme-color" content="#07131b" />
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+    <meta name="description" content="AURELIA 44 — concept Linfa Tech per un configuratore nautico immersivo." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="AURELIA 44 — Concept by Linfa Tech" />
+    <meta property="og:description" content="Un concept immersivo per esplorare e configurare uno yacht attraverso lo scroll." />
+    <meta property="og:url" content="https://www.linfa.tech/demo/aurelia/" />
+    <meta property="og:image" content="https://www.linfa.tech/demo/aurelia/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AURELIA 44 — Concept by Linfa Tech" />
+    <meta name="twitter:description" content="Un concept immersivo per esplorare e configurare uno yacht attraverso lo scroll." />
+    <meta name="twitter:image" content="https://www.linfa.tech/demo/aurelia/og.jpg" />
+    <title>AURELIA 44 — Concept by Linfa Tech</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#configurator">Vai al configuratore</a>
+    <main id="world" aria-label="Esplora AURELIA 44 scorrendo"></main>
+
+    <aside class="configurator" id="configurator" aria-label="Configura AURELIA 44" aria-expanded="false">
+      <button class="configurator__handle" type="button" aria-controls="configurator-panel" aria-expanded="false">
+        <span class="configurator__index">CONFIGURA</span>
+        <span class="configurator__current">Scafo · Pearl White</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+      </button>
+      <div class="configurator__panel" id="configurator-panel">
+        <div class="configurator__head">
+          <div>
+            <span>La tua AURELIA 44</span>
+            <h2>Definisci il carattere.</h2>
+          </div>
+          <button class="configurator__close" type="button" aria-label="Chiudi configuratore">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19M19 5 5 19" /></svg>
+          </button>
+        </div>
+        <nav class="material-tabs" aria-label="Categorie materiali"></nav>
+        <section class="material-options" aria-live="polite"></section>
+        <section class="configuration-summary" hidden>
+          <div class="summary-list"></div>
+          <button class="summary-action" type="button">Parla con Linfa Tech</button>
+          <p class="summary-status" role="status"></p>
+        </section>
+      </div>
+    </aside>
+
+    <script src="src/scroll-engine.js"></script>
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
